@@ -25,6 +25,13 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;fon
 .nav-pill{padding:6px 16px;border-radius:20px;font-size:.68rem;font-weight:500;letter-spacing:.08em;text-decoration:none;transition:all .2s}
 .nav-pill-outline{border:1px solid var(--border);color:var(--muted)}
 .nav-pill-outline:hover{border-color:var(--accent);color:var(--accent)}
+.nav-qr-wrap{position:relative;display:flex;align-items:center}
+.nav-qr-icon{width:30px;height:30px;border-radius:5px;cursor:pointer;opacity:.7;transition:opacity .2s}
+.nav-qr-icon:hover{opacity:1}
+.nav-qr-popup{display:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.5);z-index:999;width:160px}
+.nav-qr-popup img{width:130px;height:130px;border-radius:6px}
+.nav-qr-popup p{margin:8px 0 0;font-size:.72rem;color:var(--muted)}
+.nav-qr-wrap:hover .nav-qr-popup{display:block}
 /* DROPDOWN NAV */
 .nav-item{position:relative;display:flex;align-items:center}
 .nav-drop-btn{display:flex;align-items:center;gap:5px;padding:8px 12px;border-radius:8px;border:none;background:transparent;color:var(--muted);font-family:'Poppins',sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.06em;cursor:pointer;transition:all .2s;white-space:nowrap}
@@ -320,6 +327,13 @@ main{padding-top:var(--nav-h)}
     </nav>
     <div class="nav-right">
       <a href="https://linkedin.com/in/mounica1209" target="_blank" rel="noreferrer" class="nav-pill nav-pill-outline">LinkedIn</a>
+      <div class="nav-qr-wrap">
+        <img src="assets/images/qr-code.png" alt="QR code" class="nav-qr-icon"/>
+        <div class="nav-qr-popup">
+          <img src="assets/images/qr-code.png" alt="Scan to visit portfolio"/>
+          <p>Scan to visit portfolio</p>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -519,7 +533,7 @@ main{padding-top:var(--nav-h)}
         <div class="sk-group-title">Programming &amp; Data Engineering</div>
         <div class="sk-tags">
           <span class="sk-tag">Python</span><span class="sk-tag">SQL</span><span class="sk-tag">PySpark</span>
-          <span class="sk-tag">Apache Spark</span><span class="sk-tag">ETL Pipelines</span><span class="sk-tag">BigQuery</span><span class="sk-tag">Airflow</span>
+          <span class="sk-tag">Apache Spark</span><span class="sk-tag">ETL Pipelines</span><span class="sk-tag">BigQuery</span><span class="sk-tag">Airflow</span><span class="sk-tag">Dataproc</span>
         </div>
       </div>
       <div class="sk-tile">
@@ -531,7 +545,7 @@ main{padding-top:var(--nav-h)}
       <div class="sk-tile">
         <div class="sk-group-title">AI / ML &amp; Generative AI</div>
         <div class="sk-tags">
-          <span class="sk-tag">TensorFlow</span><span class="sk-tag">NLP</span><span class="sk-tag">Conversational AI</span><span class="sk-tag">LLMs</span><span class="sk-tag">AI Agents</span><span class="sk-tag">LangChain</span><span class="sk-tag">Computer Vision</span>
+          <span class="sk-tag">TensorFlow</span><span class="sk-tag">NLP</span><span class="sk-tag">Conversational AI</span><span class="sk-tag">LLMs</span><span class="sk-tag">AI Agents</span><span class="sk-tag">LangChain</span><span class="sk-tag">Computer Vision</span><span class="sk-tag">RAG</span><span class="sk-tag">Prompt Engineering</span><span class="sk-tag">IBM Watsonx</span><span class="sk-tag">Vector Databases</span><span class="sk-tag">Embeddings</span><span class="sk-tag">OpenCV</span>
         </div>
       </div>
       <div class="sk-tile">
@@ -547,9 +561,15 @@ main{padding-top:var(--nav-h)}
         </div>
       </div>
       <div class="sk-tile">
-        <div class="sk-group-title">Architecture</div>
+        <div class="sk-group-title">Architecture &amp; Data Infra</div>
         <div class="sk-tags">
-          <span class="sk-tag">REST APIs</span><span class="sk-tag">Microservices</span><span class="sk-tag">Distributed Systems</span>
+          <span class="sk-tag">REST APIs</span><span class="sk-tag">Microservices</span><span class="sk-tag">Distributed Systems</span><span class="sk-tag">Event-Driven Architecture</span><span class="sk-tag">Streaming Pipelines</span><span class="sk-tag">Pub/Sub</span><span class="sk-tag">Dataflow</span>
+        </div>
+      </div>
+      <div class="sk-tile">
+        <div class="sk-group-title">Strategy &amp; Consulting</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Digital Strategy</span><span class="sk-tag">Go-to-Market</span><span class="sk-tag">Competitive Analysis</span><span class="sk-tag">GEO Strategy</span><span class="sk-tag">Product Digitalization</span><span class="sk-tag">Market Research</span><span class="sk-tag">Brand Strategy</span>
         </div>
       </div>
     </div>
@@ -691,12 +711,15 @@ main{padding-top:var(--nav-h)}
     <h2 class="sec-title">Beyond Work</h2>
     <div class="beyond-text">
       <p>Outside of work, I enjoy activities that challenge how I think and approach problems. I love <strong>puzzles and escape rooms</strong>, anything that encourages experimentation, creativity, and critical thinking.</p>
-      <p>I value collaboration and enjoy working with friends and teams to explore ideas, solve challenges, and create meaningful experiences.</p>
+      <p>Painting is another creative outlet — a way to slow down, experiment with color, and express ideas without code or frameworks.</p>
+      <p>On the adventurous side, I once visited <strong>Kundanbagh</strong> in Hyderabad, India — one of the most well-known haunted locations in the country. Equal parts terrifying and unforgettable.</p>
       <p>Curiosity, continuous learning, and adaptability guide both my personal and professional journey.</p>
     </div>
     <div class="hobbies">
       <span class="hobby">🧩 Puzzles</span>
       <span class="hobby">🔐 Escape Rooms</span>
+      <span class="hobby">🎨 Painting</span>
+      <span class="hobby">👻 Haunted Kundanbagh</span>
       <span class="hobby">📚 Continuous Learning</span>
       <span class="hobby">🤝 Collaboration</span>
       <span class="hobby">✨ New Experiences</span>
