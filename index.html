@@ -81,6 +81,12 @@ main{padding-top:var(--nav-h)}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.ah-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color .22s,box-shadow .22s}
+.ah-card:hover{border-color:rgba(0,212,255,.25);box-shadow:var(--shadow-md)}
+.ah-icon{font-size:1.4rem;margin-bottom:8px}
+.ah-role{font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:6px;letter-spacing:.03em}
+.ah-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
 .about-text p{color:var(--muted);margin-bottom:14px;font-size:.9rem;line-height:1.85}
 .about-text p strong{color:var(--text)}
 .info-list{list-style:none;margin-top:8px}
@@ -279,6 +285,7 @@ main{padding-top:var(--nav-h)}
   .nav-drop-link{padding:8px 12px 8px 24px;border-radius:6px}
   .section{padding:42px 20px 56px}
   .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-highlights{grid-template-columns:1fr 1fr}
   .hero-stats{gap:22px 28px}
   .site-footer{padding:22px 20px;flex-direction:column;align-items:flex-start}
 }
@@ -374,25 +381,37 @@ main{padding-top:var(--nav-h)}
     <h2 class="sec-title">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>Hi, I'm Mounica, originally from <strong>Hyderabad, India</strong>. My career has always been rooted in engineering, AI, and technology, driven by <strong>curiosity</strong> to understand how systems work and connect ideas to solve meaningful problems.</p>
-        <p>I began with a <strong>B.Tech in Electronics and Communication Engineering</strong> from IIIT Sri City, then joined SpringML working on AI/ML for Google, Northwell Health, and U.S. state governments. At GlobalLogic, I led data engineering and AI for Apple and T-Mobile.</p>
-        <p>Wanting to influence <em>what</em> gets built and <em>why</em>, I pursued a <strong>STEM MBA at SMU Cox School of Business</strong>. Most recently I was an AI Product and Strategy Intern at RaidoHub, delivering predictive analytics for airport operations.</p>
+        <p>I'm Mounica — a technologist and strategist with a track record of turning complex data and AI systems into measurable business outcomes. I operate effectively across the full spectrum from hands-on engineering to product strategy, which means I can define what needs to be built, architect how it gets built, and ensure it delivers value once it's live.</p>
+        <p>My experience spans enterprise clients across healthcare, telecom, and public sector in the U.S. — including <strong>Apple, T-Mobile, Google, and Northwell Health</strong>. I've designed and delivered large-scale data pipelines, built AI and ML systems, led cross-functional delivery as a program lead, and translated technical work into stakeholder-facing strategy and roadmaps.</p>
+        <p>Whether the role calls for an <strong>analyst</strong> surfacing insights from complex data, a <strong>data engineer</strong> building reliable pipelines, a <strong>product or program manager</strong> driving delivery across teams, or a <strong>solutions architect</strong> designing systems that scale — I bring the depth and range to contribute from day one.</p>
         <div class="tags-row">
-          <span class="tag">AI Product Strategy</span><span class="tag">Machine Learning</span>
-          <span class="tag">Data Engineering</span><span class="tag">NLP</span>
-          <span class="tag">Computer Vision</span><span class="tag">Business Analytics</span>
-          <span class="tag">LLMs and GenAI</span><span class="tag">Entrepreneurship</span>
+          <span class="tag">Data Engineering</span><span class="tag">AI / ML</span>
+          <span class="tag">Product Strategy</span><span class="tag">Program Management</span>
+          <span class="tag">Solutions Architecture</span><span class="tag">Business Analytics</span>
+          <span class="tag">LLMs & GenAI</span><span class="tag">Stakeholder Delivery</span>
         </div>
       </div>
-      <div>
-        <ul class="info-list">
-          <li><span>Degree</span><span>STEM MBA Candidate</span></li>
-          <li><span>School</span><span>SMU Cox School of Business</span></li>
-          <li><span>Status</span><span>Open to Opportunities</span></li>
-          <li><span>Email</span><span>mreddypalli@smu.edu</span></li>
-          <li><span>Phone</span><span>+1 682-409-5586</span></li>
-          <li><span>LinkedIn</span><span>linkedin.com/in/mounica1209</span></li>
-        </ul>
+      <div class="about-highlights">
+        <div class="ah-card">
+          <div class="ah-icon">📊</div>
+          <div class="ah-role">Analyst</div>
+          <div class="ah-desc">Translating large, complex datasets into clear insights and actionable recommendations for business decisions.</div>
+        </div>
+        <div class="ah-card">
+          <div class="ah-icon">⚙️</div>
+          <div class="ah-role">Data Engineer</div>
+          <div class="ah-desc">Building scalable pipelines, ETL systems, and cloud data infrastructure across AWS, GCP, and Azure.</div>
+        </div>
+        <div class="ah-card">
+          <div class="ah-icon">🗺️</div>
+          <div class="ah-role">Product & Program Manager</div>
+          <div class="ah-desc">Leading cross-functional delivery, defining roadmaps, and aligning engineering output to business goals.</div>
+        </div>
+        <div class="ah-card">
+          <div class="ah-icon">🏗️</div>
+          <div class="ah-role">Solutions Architect</div>
+          <div class="ah-desc">Designing end-to-end AI and data systems — from event-driven pipelines to modular, API-first architectures.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -458,29 +477,25 @@ main{padding-top:var(--nav-h)}
         </ul>
       </div>
       <div class="exp-card">
-        <div class="exp-hdr"><div class="exp-role">Senior Data Engineer &mdash; Delivery Lead</div><div class="exp-period">Nov 2021 &ndash; July 2024</div></div>
+        <div class="exp-hdr"><div class="exp-role">Senior Data Engineer</div><div class="exp-period">Nov 2021 &ndash; July 2024</div></div>
         <div class="exp-co">GlobalLogic &middot; <span style="color:var(--muted);font-weight:400">Clients: Apple, T-Mobile</span></div>
         <ul class="exp-ul">
-          <li>Designed cloud-based data and AI/ML pipelines supporting enterprise clients such as <strong>Apple and T-Mobile</strong>, enabling scalable analytics solutions impacting 500,000+ end users globally.</li>
-          <li>Led development of an automated GIS data processing framework for <strong>Apple Maps</strong>, collaborating with product engineers and stakeholders and reducing manual task completion time by 50 percent while improving data update speed.</li>
-          <li>Planned and executed large-scale data migration and schema optimization initiatives handling datasets exceeding <strong>50TB</strong>, improving data processing efficiency by 20 percent through improved data architecture design.</li>
-          <li>Partnered with cross-functional teams including product managers, engineers, and leadership to deliver AI-enabled features aligned with business goals and user needs.</li>
-          <li>Improved pipeline scalability and reliability by designing modular workflows using cloud technologies, reducing system processing delays and improving deployment efficiency.</li>
-          <li>Translated business requirements into structured technical specifications and execution plans, ensuring alignment between product strategy and engineering delivery.</li>
-          <li>Enabled faster decision-making through improved data availability and reporting capabilities, supporting multiple enterprise client initiatives.</li>
+          <li>Delivered cloud-based AI/ML and data engineering solutions for <strong>Apple and T-Mobile</strong>, impacting over 500,000 users globally.</li>
+          <li>Coordinated with Product Engineers, Data Scientists, and Leadership to build an automated GIS data framework for <strong>Apple Maps</strong>, reducing task completion time by 30%.</li>
+          <li>Conducted data analysis, schema optimization, and migration planning to streamline large-scale data migrations using Agile methodologies, resulting in a 20% boost in efficiency.</li>
+          <li>Redesigned a client's personalized offer pipeline to handle 3× data volume using PySpark and cloud-native infrastructure.</li>
+          <li>Built unified SQL pipelines and Tableau dashboards consolidating 30+ tables to enable consistent customer inactivity reporting across business units.</li>
         </ul>
       </div>
       <div class="exp-card">
         <div class="exp-hdr"><div class="exp-role">AI/ML Data Engineer</div><div class="exp-period">Feb 2019 &ndash; Oct 2021</div></div>
         <div class="exp-co">SpringML &middot; <span style="color:var(--muted);font-weight:400">Clients: Google, Northwell Health, City of Memphis, Dow Jones</span></div>
         <ul class="exp-ul">
-          <li>Delivered AI-driven solutions for enterprise clients including <strong>Google, Northwell Health, and U.S. state government agencies</strong>, supporting digital transformation initiatives using machine learning and cloud platforms.</li>
-          <li>Led development of AI-based document processing and NLP solutions, improving data extraction accuracy and reducing manual effort through automation.</li>
-          <li>Conducted technical feasibility analysis and competitive benchmarking for AI/ML proof-of-concept initiatives, achieving a <strong>70 percent conversion rate</strong> from POC to production deployment.</li>
-          <li>Managed the end-to-end lifecycle of AI solutions including chatbots, computer vision, and NLP models, coordinating requirements gathering, development, testing, and deployment activities.</li>
-          <li>Collaborated with cross-functional teams to translate business problems into machine learning solutions, improving operational efficiency and decision-making processes.</li>
-          <li>Built scalable data pipelines supporting structured and unstructured data processing, improving system performance and enabling faster model training workflows.</li>
-          <li>Supported product roadmap development by identifying opportunities to apply AI solutions to customer problems across healthcare, public sector, and enterprise domains.</li>
+          <li>Delivered AI/ML solutions for <strong>Google, Northwell Health, City of Memphis, and Dow Jones</strong> across healthcare, public sector, and enterprise domains — achieving a 70% POC-to-production conversion rate.</li>
+          <li>Built a hybrid OCR + NLP invoice processing pipeline for <strong>Northwell Health</strong>, improving extraction accuracy from 65% to 90% and reducing processing time by 50%.</li>
+          <li>Designed and delivered an event-driven real-time health check-in system for <strong>Google</strong>, supporting 10,000+ sessions with sub-2-second response and 100% compliance audit pass.</li>
+          <li>Developed a computer vision pothole detection model for the <strong>City of Memphis</strong>, improving accuracy from 70% to 90%+ and supporting road safety for 65,000+ residents.</li>
+          <li>Built an AI Slack chatbot for <strong>Dow Jones</strong> covering password reset and employee onboarding — achieving 92% accuracy and earning $3M in follow-on client work.</li>
         </ul>
       </div>
     </div>
@@ -809,7 +824,7 @@ const projectData = [
     name:'AI Healthcare Invoice Processing Automation',
     desc:'Hybrid OCR + NLP pipeline to handle 30+ invoice formats without retraining — improving accuracy from 65% to 90%.',
     impacts:['Extraction accuracy: 65% → 90%','Processing time reduced by 50%','Avoided ~40% retraining cost increase','Generated $2M in follow-on engagement'],
-    full:'<strong>The Challenge</strong>\nNorthwell Health\'s invoice processing pipeline was breaking down at scale. Built around a fixed set of templates, it worked only when layouts were familiar — but as vendor count grew past 30 formats, accuracy fell, manual review escalated, and the path to scaling became unclear.\n\n<strong>Solution</strong>\nThe pipeline was redesigned into a hybrid OCR + NLP architecture. OCR extracts raw text; semantic field classification determines what each field means — not just where it appears on the page. This made the system format-agnostic without requiring a full rebuild.\nCritical fields were prioritized: provider name, invoice number, service date, billing amount, and downstream billing codes. Extraction and validation logic was built using content patterns and contextual cues rather than template coordinates.\nDocument preprocessing was improved to reduce OCR noise before the NLP layer, increasing downstream accuracy.\nEngineers, data scientists, and client stakeholders collaborated throughout to validate output quality against operational requirements.\n\n<strong>Stack &amp; Approach</strong>\nOCR · Transformer-based NLP · Semantic field classification · Content pattern matching · Scanned document preprocessing\n\n<strong>Results</strong>\nExtraction accuracy: 65% → 90%\nProcessing time: reduced by 50%\nAvoided ~40% increase in retraining costs\n$2M in follow-on engagement from client confidence in production readiness\n\n<strong>Key Insight</strong>\nThe original system was brittle because it treated invoices as images with fixed coordinates, not as documents with meaning. Shifting to semantic understanding made the pipeline format-agnostic — the right level of change for the client\'s constraints, not the most technically ambitious one.'
+    full:'A hybrid OCR + NLP pipeline built for Northwell Health to automate invoice processing across 30+ vendor formats. Rather than relying on fixed templates that broke whenever a layout changed, the system uses semantic field classification to understand document content regardless of structure — extracting provider name, invoice number, service date, billing amount, and billing codes from any format without retraining.\n\nDocument preprocessing was optimized to reduce OCR noise before the NLP layer. Extraction logic was built around content patterns and contextual cues, making the pipeline format-agnostic and production-ready at scale.\n\n<strong>Stack</strong>\nOCR · Transformer-based NLP · Semantic field classification · Scanned document preprocessing\n\n<strong>Outcomes</strong>\nExtraction accuracy: 65% → 90% · Processing time reduced by 50% · Avoided ~40% retraining cost increase · $2M in follow-on engagement'
   },
   {
     id:'northwell-checkin', img:svgs.healthcare,
@@ -831,7 +846,7 @@ const projectData = [
     name:'Apple Maps Workflow Automation',
     desc:'Automated GIS map data correction pipeline, cutting a 4-week update cycle to 8 days and saving 64 engineering hours monthly.',
     impacts:['Update cycle: 4 weeks → 8 days','64 engineering hours saved per month','Map corrections reach millions of users faster'],
-    full:'<strong>The Challenge</strong>\nApple Maps depended on recurring corrections to geographic datasets, but each update cycle took 4 weeks of manual GIS work. For a product where data freshness directly affects user experience at scale, this was a meaningful bottleneck — and the manual process would only get harder to maintain as map coverage expanded.\n\n<strong>Solution</strong>\nThe existing correction workflow was mapped end-to-end — ingestion, validation, correction, transformation, output — to identify which stages were repetitive and suitable for automation.\nA cloud-based data framework was designed to automate the highest-friction stages: validation logic, correction checks, and data transformation. Rolled out incrementally so teams could adopt it without disrupting existing map quality standards.\nProduct engineers and GIS specialists were brought in throughout to ensure the automated logic reflected real correction requirements.\nException monitoring and cycle-time tracking were added to give the team clear visibility into performance gains and surface edge cases quickly.\n\n<strong>Stack &amp; Approach</strong>\nCloud data pipeline · GIS workflow automation · Incremental rollout strategy · Exception monitoring · Performance tracking\n\n<strong>Results</strong>\nMap update cycle: 4 weeks → 8 days\n64 engineering hours saved per month\nFaster correction delivery to millions of Apple Maps users globally\n\n<strong>Key Insight</strong>\nThe most effective automation wasn\'t the most technically complex — it was targeting the highest-friction manual steps within the existing process. That kept adoption risk low and delivered measurable results without requiring a full platform replacement.'
+    full:'A cloud-based automation framework built for Apple Maps to eliminate manual GIS data correction work. The existing workflow — covering ingestion, validation, correction, transformation, and output — was mapped end-to-end to identify which stages were repetitive and automatable. The highest-friction steps were replaced with automated logic, rolled out incrementally to avoid disrupting existing map quality standards.\n\nProduct engineers and GIS specialists were involved throughout to ensure the automated corrections matched real-world requirements. Exception monitoring and cycle-time tracking were added for ongoing visibility.\n\n<strong>Stack</strong>\nCloud data pipeline · GIS workflow automation · Exception monitoring\n\n<strong>Outcomes</strong>\nUpdate cycle: 4 weeks → 8 days · 64 engineering hours saved per month · Faster correction delivery to millions of Apple Maps users globally'
   },
   {
     id:'pothole', img:svgs.road,
@@ -864,7 +879,7 @@ const projectData = [
     name:'Customer Inactivity Intelligence Dashboard',
     desc:'SQL pipelines + Tableau dashboards unifying 30+ tables into a single trusted inactivity signal for retention teams.',
     impacts:['Unified inactivity definition across all teams','Enabled targeted retention campaigns','Improved analytics trust and decision-making'],
-    full:'<strong>The Challenge</strong>\nT-Mobile\'s teams were measuring customer inactivity differently across business units — different definitions, different source tables, different logic. The data existed across 30+ tables, but inconsistent measurement made reporting untrustworthy and retention campaigns harder to run effectively.\n\n<strong>Solution</strong>\nDefinition alignment came first, before a single query was written. Stakeholders across teams were engaged to establish shared inactivity logic — the most critical step, because building on inconsistent definitions would have just produced a prettier version of the same problem.\nSQL pipelines were built to unify 30+ tables — customer activity signals, usage patterns, billing data, messaging behavior — into a single analytics-ready inactivity layer.\nTableau dashboards were delivered to let teams monitor inactivity trends, segment at-risk customers by behavior pattern, and act on retention insights. Designed for actionability, not just reporting.\nThe pipeline was built for maintainability: clear table dependencies, consistent data logic, and documentation so the dashboards stayed trustworthy as underlying data changed.\n\n<strong>Stack &amp; Approach</strong>\nSQL · Tableau · Data modeling · Stakeholder alignment · KPI definition workshops · Pipeline documentation\n\n<strong>Results</strong>\nSingle unified inactivity definition across all T-Mobile business units\nEarlier, more reliable identification of at-risk customer segments\nEnabled more targeted retention campaigns with consistent cross-team data\nImproved confidence in analytics for real business decisions\n\n<strong>Key Insight</strong>\nThe hardest part of analytics is often not the visualization — it\'s getting everyone to trust the same numbers. Solving the definition problem first made everything downstream more valuable.'
+    full:'SQL pipelines and Tableau dashboards built for T-Mobile to create a unified view of customer inactivity across business units. Data was consolidated from 30+ tables — activity signals, usage patterns, billing data, and messaging behavior — into a single analytics-ready layer with a shared inactivity definition agreed upon across teams.\n\nDashboards were designed for retention team workflows: inactivity trends, at-risk customer segmentation by behavior pattern, and actionable views for campaign targeting. The pipeline was built for long-term maintainability with clear table dependencies and documented logic.\n\n<strong>Stack</strong>\nSQL · Tableau · Data modeling · Pipeline documentation\n\n<strong>Outcomes</strong>\nUnified inactivity definition across all business units · Earlier identification of at-risk customers · Enabled more targeted retention campaigns'
   },
   {
     id:'tmobile-pipeline', img:svgs.pipeline,
@@ -875,7 +890,7 @@ const projectData = [
     name:'Scalable Data Pipeline Architecture',
     desc:'Redesigned T-Mobile\'s personalized offer pipeline to handle 3× data volume — validated with a prototype before stakeholder sign-off.',
     impacts:['Handled 3× higher data volume','Significantly improved processing performance','Reduced long-term infrastructure cost'],
-    full:'<strong>The Challenge</strong>\nT-Mobile\'s personalized offer delivery pipeline was approaching its scalability ceiling. As data volume and personalization use cases grew, the existing architecture was going to become a bottleneck. There was also internal pressure to stay with the familiar system — changing direction mid-project carries real cost and organizational friction.\n\n<strong>Solution</strong>\nA prototype of the redesigned architecture was built first — generating concrete, comparable performance evidence before any stakeholder conversation. The prototype demonstrated 3× higher data volume capacity with significantly improved runtime on the same workloads.\nThat evidence was used to facilitate a grounded stakeholder discussion — the decision was backed by data, not engineering preference, which reduced resistance to changing direction mid-project.\nThe pipeline was redesigned around the most critical scalability bottlenecks using PySpark and cloud-native infrastructure, focused on processing efficiency and long-term maintainability rather than a ground-up rebuild.\n\n<strong>Stack &amp; Approach</strong>\nPySpark · Cloud-native pipeline architecture · Prototype-driven validation · A/B architecture comparison · Stakeholder alignment\n\n<strong>Results</strong>\n3× higher data volume handled\nSignificantly improved processing performance\nReduced long-term infrastructure cost vs. scaling the older design\nFuture-ready foundation for growing personalized offer use cases\n\n<strong>Key Insight</strong>\nThe most important work wasn\'t the architecture redesign itself — it was building evidence before asking for buy-in. A prototype that shows the performance difference is more persuasive than any technical argument, especially when there\'s pressure to stay the course.'
+    full:'A scalable data pipeline redesign for T-Mobile\'s personalized offer delivery system, built to handle 3× the existing data volume using PySpark and cloud-native infrastructure. A working prototype of the new architecture was built first to produce concrete performance evidence before any stakeholder decision — demonstrating improved throughput on the same workloads as the existing system.\n\nThe redesign targeted the most critical scalability bottlenecks, with a focus on processing efficiency and long-term maintainability. The prototype-first approach gave stakeholders data-backed reasoning to support the architectural change.\n\n<strong>Stack</strong>\nPySpark · Cloud-native pipeline architecture · Prototype-driven validation\n\n<strong>Outcomes</strong>\n3× higher data volume handled · Significantly improved processing performance · Reduced long-term infrastructure cost'
   },
   {
     id:'dowjones-chatbot', img:svgs.pipeline,
@@ -886,7 +901,7 @@ const projectData = [
     name:'AI Slack Chatbot — Password Reset & Employee Onboarding',
     desc:'Built a secure Slack-integrated AI chatbot for IT helpdesk automation — delivered in two phases after recovering from a mid-project integration failure.',
     impacts:['92% chatbot accuracy — exceeded 85% target','Phased delivery recovered a slipping deadline','$3M in follow-on projects from client trust earned'],
-    full:'<strong>The Challenge</strong>\nDow Jones needed an AI-powered Slack chatbot to handle two high-volume IT requests: employee password resets and new hire onboarding support. The project involved secure cloud integrations, encryption requirements, and Slack API dependencies — and partway through development, a version incompatibility with Slack\'s latest release broke the integration and threatened the entire timeline.\n\n<strong>Solution</strong>\nWhen the Slack version incompatibility surfaced, full ownership was taken. The engineering team was assembled to isolate the root cause, the integration approach was rebuilt from scratch, and tasks were reassigned based on team member strengths.\nThe client was contacted proactively — before they had to ask. The technical issue, its timeline impact, and available options were clearly laid out. A phased delivery plan was presented that would deliver value earlier rather than delaying the entire project.\nPhase 1 — Password Reset: The most business-critical feature was prioritized. A secure, Slack-native password reset flow was built with cloud-based identity validation and encrypted credential handling and delivered first.\nPhase 2 — Onboarding Support: A document-aware chatbot was built allowing new hires to access company policies, setup guides, and FAQs through natural language queries in Slack.\nDaily standups were set up to track progress against the new phased milestones. A continuous client feedback loop was maintained throughout both phases.\nA clear success metric was defined upfront: 85%+ chatbot accuracy in real responses before full deployment.\n\n<strong>Stack &amp; Approach</strong>\nConversational AI · NLP · Slack API integration · AES encryption · Cloud-based identity management · Agile phased delivery · Stakeholder communication\n\n<strong>Results</strong>\n92% chatbot accuracy — exceeded the 85% target\nDelivery recovered via two-phase plan: Phase 1 on time, full release one week late\nClient cited transparency and execution quality; awarded SpringML $3M in follow-on projects\n\n<strong>Key Insight</strong>\nThe costliest part of this project wasn\'t the technical failure — it was the original plan that didn\'t account for integration risk and had no buffer. The recovery worked because of two things: honest client communication before they had to ask, and a phased structure that gave the client value while the team regrouped.'
+    full:'A Slack-integrated AI chatbot built for Dow Jones to automate two high-volume IT workflows: employee password resets and new hire onboarding support. Delivered in two phases — password reset functionality first, followed by a document-aware onboarding assistant allowing employees to query company policies and setup guides through natural language in Slack.\n\nThe system was built with secure cloud-based identity validation, AES encryption for credential handling, and Slack API integration. A mid-project version incompatibility with Slack\'s API required rebuilding the integration from scratch, which led to a restructured phased delivery plan communicated proactively to the client.\n\n<strong>Stack</strong>\nConversational AI · NLP · Slack API · AES encryption · Cloud identity management · Agile phased delivery\n\n<strong>Outcomes</strong>\n92% chatbot accuracy — exceeded 85% target · Phased delivery recovered timeline · $3M in follow-on projects awarded'
   },
   {
     id:'yt-rag', img:svgs.pipeline,
@@ -897,7 +912,7 @@ const projectData = [
     name:'AI-Powered YouTube Summarizer & Q&A Tool',
     desc:'End-to-end RAG pipeline that extracts YouTube transcripts, generates video summaries, and answers contextual questions using semantic retrieval and LLMs.',
     impacts:['Full RAG pipeline: transcript → chunks → embeddings → FAISS → Watsonx LLM','Grounded Q&A — answers sourced from transcript, not model memory','Interactive Gradio interface for summarization and natural language queries'],
-    full:'<strong>The Problem</strong>\nValuable knowledge is locked inside long-form video content — tutorials, lectures, interviews, technical walkthroughs. Video is not searchable, transcripts are unstructured, and manually watching hours of content to extract a few key ideas is inefficient. The challenge was building a system that makes video knowledge as queryable as structured text.\n\n<strong>Solution</strong>\nAn end-to-end Retrieval-Augmented Generation pipeline was built to process YouTube videos and make them searchable through natural language.\nTranscripts are extracted from any YouTube URL using the YouTube Transcript API, then split into semantically coherent chunks using RecursiveCharacterTextSplitter.\nEach chunk is converted into a vector embedding using IBM Watsonx Embeddings and stored in a FAISS vector database for fast similarity search.\nWhen a question is submitted, the most relevant transcript chunks are retrieved via similarity search and passed — along with the question — into a LangChain RetrievalQA chain powered by IBM Watsonx LLM.\nA separate summarization chain generates a concise video summary covering the key ideas without requiring the user to watch the video.\nAll interactions are served through a Gradio interface for real-time summarization and Q&A.\n\n<strong>Stack &amp; Approach</strong>\nPython · LangChain · IBM Watsonx LLM · Watsonx Embeddings · FAISS · YouTube Transcript API · RecursiveCharacterTextSplitter · Gradio · RAG · Semantic Search · Prompt Engineering\n\n<strong>Key Design Decisions</strong>\nRetrieval grounding over pure generation: answers are sourced from actual transcript content, significantly reducing hallucination risk compared to prompting an LLM directly.\nChunking strategy: RecursiveCharacterTextSplitter preserves semantic context at chunk boundaries, improving retrieval relevance.\nFAISS for speed: local vector store enables fast similarity search without requiring a managed vector database service.\n\n<strong>Key Insight</strong>\nThe value of RAG isn\'t just better answers — it\'s verifiable answers. Grounding LLM responses in retrieved source content makes the system trustworthy for knowledge extraction, not just impressive in a demo.'
+    full:'An end-to-end RAG pipeline that takes any YouTube video URL and makes its content fully searchable through natural language. Transcripts are extracted, split into semantic chunks, embedded using IBM Watsonx Embeddings, and stored in a FAISS vector database. Questions are answered by retrieving the most relevant transcript sections and passing them as context to IBM Watsonx LLM via a LangChain RetrievalQA chain — so answers are grounded in actual video content, not model memory.\n\nA separate summarization chain generates a concise overview of the video without requiring the user to watch it. Everything is accessible through a Gradio interface for real-time interaction.\n\n<strong>Stack</strong>\nPython · LangChain · IBM Watsonx LLM · Watsonx Embeddings · FAISS · YouTube Transcript API · Gradio · RAG'
   },
   {
     id:'doc-rag', img:svgs.pipeline,
@@ -908,7 +923,7 @@ const projectData = [
     name:'Document Q&A System — RAG with LangChain & ChromaDB',
     desc:'Intelligent PDF question-answering system using semantic search and LLM reasoning — retrieves relevant document sections before generating grounded answers.',
     impacts:['Full document RAG pipeline: PDF → chunks → ChromaDB → Watsonx LLM','Semantic retrieval surfaces relevant passages before any answer is generated','Context-aware Q&A with reduced hallucination through retrieval grounding'],
-    full:'<strong>The Problem</strong>\nOrganizations manage large volumes of documents — reports, policies, research papers, technical manuals — but extracting specific information quickly is difficult. Traditional keyword search misses semantic meaning. Reading entire documents to find relevant sections is slow. The challenge was building a system that understands questions and retrieves contextually accurate answers from document collections.\n\n<strong>Solution</strong>\nA document intelligence system was built using a LangChain-orchestrated RAG pipeline that enables semantic Q&A over uploaded PDF files.\nDocuments are loaded and parsed using PyPDFLoader, then split into overlapping text chunks using RecursiveCharacterTextSplitter to preserve context at boundaries.\nChunks are converted into vector embeddings using IBM Watsonx Embeddings and stored in ChromaDB, a persistent vector database optimized for document retrieval.\nThe ChromaDB store is wrapped as a LangChain retriever and connected to a RetrievalQA chain. When a question is submitted, the most semantically similar chunks are retrieved and passed as context to IBM Watsonx LLM to generate a grounded, document-anchored answer.\nThe full interface is served through Gradio for interactive document upload and question answering.\n\n<strong>Stack &amp; Approach</strong>\nPython · LangChain · IBM Watsonx LLM · Watsonx Embeddings · ChromaDB · PyPDFLoader · RecursiveCharacterTextSplitter · Gradio · RAG · Semantic Search · Prompt Engineering\n\n<strong>Key Design Decisions</strong>\nChromaDB over FAISS: ChromaDB provides persistent storage and better support for multi-document collections compared to an in-memory vector store.\nRetrieval before generation: the system always retrieves before generating — no answer is produced without relevant source context, making responses auditable.\nOverlapping chunks: chunk overlap ensures that context is not lost at split boundaries, improving retrieval accuracy for questions that span multiple sections.\n\n<strong>Key Insight</strong>\nThe hardest part of document Q&A isn\'t the LLM — it\'s the retrieval. A well-tuned chunking and embedding strategy determines whether the right context reaches the model. Getting that right is what separates a useful system from one that sounds confident but retrieves the wrong information.'
+    full:'A LangChain-orchestrated RAG pipeline for semantic Q&A over uploaded PDF documents. Files are loaded via PyPDFLoader, split into overlapping chunks to preserve context at boundaries, and embedded using IBM Watsonx Embeddings. Embeddings are stored in ChromaDB — a persistent vector database — and retrieved at query time to provide grounded context to IBM Watsonx LLM before any answer is generated.\n\nThe full workflow — document upload, processing, and Q&A — is served through a Gradio interface.\n\n<strong>Stack</strong>\nPython · LangChain · IBM Watsonx LLM · Watsonx Embeddings · ChromaDB · PyPDFLoader · Gradio · RAG'
   },
   {
     id:'nucleate', img:svgs.maternal,
