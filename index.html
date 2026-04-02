@@ -119,9 +119,9 @@ main{padding-top:var(--nav-h)}
 
 /* PROJECTS */
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-.proj-card{background:var(--card);border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;transition:all .28s;cursor:pointer;overflow:hidden;box-shadow:var(--shadow);scroll-margin-top:calc(var(--nav-h) + 24px)}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;transition:all .28s;cursor:pointer;overflow:hidden;box-shadow:var(--shadow);scroll-margin-top:calc(var(--nav-h) + 24px);min-height:420px}
 .proj-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.35)}
-.proj-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;overflow:hidden;flex-shrink:0}
+.proj-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;overflow:hidden;flex-shrink:0}
 .proj-img::after{content:'View Details';position:absolute;inset:0;background:rgba(0,0,0,.38);display:grid;place-items:center;color:#fff;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;opacity:0;transition:opacity .25s;font-family:'Poppins',sans-serif;font-weight:500}
 .proj-card:hover .proj-img::after{opacity:1}
 .proj-body{padding:20px;display:flex;flex-direction:column;flex:1}
@@ -144,7 +144,10 @@ main{padding-top:var(--nav-h)}
 .modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.25);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3);cursor:pointer;font-size:1.2rem;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:10}
 .modal-close:hover{background:rgba(255,255,255,.45)}
 .modal-body{padding:28px 32px}
-.modal-client{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.modal-client{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.modal-meta{font-size:.78rem;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.modal-meta strong{color:var(--text);font-weight:500}
+.modal-meta-sep{opacity:.35}
 .modal-title{font-family:'Raleway',sans-serif;font-size:1.35rem;font-weight:800;color:var(--text);margin-bottom:12px;line-height:1.3}
 .modal-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .modal-tag{padding:4px 12px;border-radius:20px;font-size:.68rem;background:rgba(0,212,255,.07);color:var(--accent);border:1px solid rgba(0,212,255,.18)}
@@ -158,19 +161,32 @@ main{padding-top:var(--nav-h)}
 .modal-sub-body{font-size:.85rem;color:var(--muted);line-height:1.85;margin:0}
 
 /* RESEARCH */
-.res-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:26px;display:flex;gap:18px;margin-bottom:16px;transition:border-color .25s;box-shadow:var(--shadow)}
-.res-card:hover{border-color:rgba(124,58,237,.3)}
+.res-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:26px;display:flex;gap:18px;margin-bottom:16px;transition:border-color .25s,transform .22s,box-shadow .22s;box-shadow:var(--shadow);cursor:pointer}
+.res-card:hover{border-color:rgba(124,58,237,.3);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.res-card:focus-visible{outline:2px solid rgba(124,58,237,.55);outline-offset:3px}
 .res-ico{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:46px;height:46px;border-radius:10px;background:rgba(124,58,237,.1);font-size:1.1rem;font-weight:700;border:1px solid rgba(124,58,237,.2);color:#7c3aed}
+.res-body{display:flex;flex-direction:column;min-width:0}
 .res-title{font-family:'Raleway',sans-serif;color:var(--text);font-size:.98rem;font-weight:600;margin-bottom:5px;line-height:1.4}
 .res-venue{font-size:.82rem;color:#7c3aed;margin-bottom:7px}
 .res-desc{font-size:.82rem;line-height:1.7;color:var(--muted)}
+.res-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
+.res-tag{padding:4px 11px;border-radius:20px;font-size:.66rem;letter-spacing:.05em;background:rgba(124,58,237,.1);color:#c4b5fd;border:1px solid rgba(124,58,237,.18)}
+.res-highlights{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.res-highlight{display:flex;align-items:flex-start;gap:10px;font-size:.8rem;color:var(--text);line-height:1.6}
+.res-highlight-dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#22d3ee);flex-shrink:0;margin-top:7px}
+.res-actions{display:flex;flex-wrap:wrap;gap:10px}
+.res-link{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;border:1px solid rgba(124,58,237,.25);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#c4b5fd;background:rgba(124,58,237,.08);transition:all .2s}
+.res-link:hover{border-color:#8b5cf6;color:#e9d5ff;background:rgba(124,58,237,.16)}
+.res-link-fill{background:linear-gradient(135deg,#7c3aed 0%,#4f46e5 100%);border-color:transparent;color:#fff}
+.res-link-fill:hover{background:linear-gradient(135deg,#8b5cf6 0%,#6366f1 100%);color:#fff}
 
 /* SKILLS */
-.sk-outer{display:flex;flex-direction:column;gap:32px}
-.sk-group-title{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.sk-group-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.sk-outer{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.sk-tile{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;box-shadow:var(--shadow);transition:border-color .22s,box-shadow .22s}
+.sk-tile:hover{border-color:rgba(0,212,255,.25);box-shadow:var(--shadow-md)}
+.sk-group-title{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .sk-tags{display:flex;flex-wrap:wrap;gap:7px}
-.sk-tag{padding:7px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.76rem;color:var(--text);transition:all .2s;cursor:default;box-shadow:var(--shadow)}
+.sk-tag{padding:6px 14px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:20px;font-size:.74rem;color:var(--muted);transition:all .2s;cursor:default}
 .sk-tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.05)}
 
 /* CERTIFICATIONS */
@@ -381,7 +397,7 @@ main{padding-top:var(--nav-h)}
           <span class="badge bgreen">90% Scholarship</span>
           <span class="badge bb">VP &mdash; Asian Business Association</span>
           <a href="#nucleate" class="badge bp badge-link" onclick="highlightCard('nucleate')">Nucleate Activator Finalist &mdash; Kiwi Health &#8599;</a>
-          <a href="#glp" class="badge bb badge-link" onclick="highlightCard('glp')">Global Leadership Program Consultant &#8599;</a>
+          <a href="#glp" class="badge bb badge-link" onclick="highlightCard('glp')">GLP Strategy &amp; Marketing Consultant &mdash; Radiobotics &#8599;</a>
         </div>
       </div>
       <div class="edu-card">
@@ -417,7 +433,7 @@ main{padding-top:var(--nav-h)}
     <h2 class="sec-title">Experience</h2>
     <div class="exp-list">
       <div class="exp-card">
-        <div class="exp-hdr"><div class="exp-role">AI Product &amp; Strategy Intern</div><div class="exp-period">2025</div></div>
+        <div class="exp-hdr"><div class="exp-role">AI Product &amp; Strategy Intern</div><div class="exp-period">June 2025 &ndash; Aug 2025</div></div>
         <div class="exp-co">RaidoHub</div>
         <ul class="exp-ul">
           <li>Collaborated with product engineers, marketing, and executive leadership to design <strong>ML solutions improving airport operational efficiency</strong>.</li>
@@ -427,23 +443,29 @@ main{padding-top:var(--nav-h)}
         </ul>
       </div>
       <div class="exp-card">
-        <div class="exp-hdr"><div class="exp-role">Senior Data Engineer</div><div class="exp-period">2021 &ndash; 2024</div></div>
-        <div class="exp-co">GlobalLogic</div>
+        <div class="exp-hdr"><div class="exp-role">Senior Data Engineer &mdash; Delivery Lead</div><div class="exp-period">Nov 2021 &ndash; July 2024</div></div>
+        <div class="exp-co">GlobalLogic &middot; <span style="color:var(--muted);font-weight:400">Clients: Apple, T-Mobile</span></div>
         <ul class="exp-ul">
-          <li>Designed cloud-based AI/ML solutions for <strong>Apple and T-Mobile</strong>, supporting 500,000+ users globally.</li>
-          <li>Led <strong>Apple Maps GIS automation</strong>, reducing manual processing time by 30% and improving data accuracy for millions.</li>
-          <li>Improved data migration efficiency by <strong>20%</strong> through optimized schema design and agile strategies.</li>
-          <li>Aligned technical solutions with strategic objectives across product, engineering, and business stakeholders.</li>
+          <li>Designed cloud-based data and AI/ML pipelines supporting enterprise clients such as <strong>Apple and T-Mobile</strong>, enabling scalable analytics solutions impacting 500,000+ end users globally.</li>
+          <li>Led development of an automated GIS data processing framework for <strong>Apple Maps</strong>, collaborating with product engineers and stakeholders and reducing manual task completion time by 50 percent while improving data update speed.</li>
+          <li>Planned and executed large-scale data migration and schema optimization initiatives handling datasets exceeding <strong>50TB</strong>, improving data processing efficiency by 20 percent through improved data architecture design.</li>
+          <li>Partnered with cross-functional teams including product managers, engineers, and leadership to deliver AI-enabled features aligned with business goals and user needs.</li>
+          <li>Improved pipeline scalability and reliability by designing modular workflows using cloud technologies, reducing system processing delays and improving deployment efficiency.</li>
+          <li>Translated business requirements into structured technical specifications and execution plans, ensuring alignment between product strategy and engineering delivery.</li>
+          <li>Enabled faster decision-making through improved data availability and reporting capabilities, supporting multiple enterprise client initiatives.</li>
         </ul>
       </div>
       <div class="exp-card">
-        <div class="exp-hdr"><div class="exp-role">AI/ML Data Engineer</div><div class="exp-period">2019 &ndash; 2021</div></div>
-        <div class="exp-co">SpringML</div>
+        <div class="exp-hdr"><div class="exp-role">AI/ML Data Engineer</div><div class="exp-period">Feb 2019 &ndash; Oct 2021</div></div>
+        <div class="exp-co">SpringML &middot; <span style="color:var(--muted);font-weight:400">Clients: Google, Northwell Health, City of Memphis, Dow Jones</span></div>
         <ul class="exp-ul">
-          <li>Built AI solutions across NLP, computer vision, and predictive analytics for <strong>Google, Northwell Health, and U.S. state governments</strong>.</li>
-          <li>Conducted market analysis and AI benchmarking, <strong>converting 70% of POCs into long-term projects</strong>.</li>
-          <li>Managed the full ML lifecycle from requirements gathering through deployment.</li>
-          <li>Translated business requirements into scalable technical solutions aligned with organizational priorities.</li>
+          <li>Delivered AI-driven solutions for enterprise clients including <strong>Google, Northwell Health, and U.S. state government agencies</strong>, supporting digital transformation initiatives using machine learning and cloud platforms.</li>
+          <li>Led development of AI-based document processing and NLP solutions, improving data extraction accuracy and reducing manual effort through automation.</li>
+          <li>Conducted technical feasibility analysis and competitive benchmarking for AI/ML proof-of-concept initiatives, achieving a <strong>70 percent conversion rate</strong> from POC to production deployment.</li>
+          <li>Managed the end-to-end lifecycle of AI solutions including chatbots, computer vision, and NLP models, coordinating requirements gathering, development, testing, and deployment activities.</li>
+          <li>Collaborated with cross-functional teams to translate business problems into machine learning solutions, improving operational efficiency and decision-making processes.</li>
+          <li>Built scalable data pipelines supporting structured and unstructured data processing, improving system performance and enabling faster model training workflows.</li>
+          <li>Supported product roadmap development by identifying opportunities to apply AI solutions to customer problems across healthcare, public sector, and enterprise domains.</li>
         </ul>
       </div>
     </div>
@@ -460,12 +482,29 @@ main{padding-top:var(--nav-h)}
   <section class="section" id="research" style="background:var(--bg2)">
     <p class="sec-label">Academic Contribution</p>
     <h2 class="sec-title">Research</h2>
-    <div class="res-card">
+    <div class="res-card" id="mobile-quad" role="button" tabindex="0" aria-label="View research details for Mobile Quad Controlled Wireless Robotic Arm">
       <div class="res-ico">R</div>
-      <div>
+      <div class="res-body">
         <div class="res-title">Mobile Quad Controlled Wireless Robotic Arm</div>
-        <div class="res-venue">IEEE Conference Publication &mdash; 2016</div>
-        <div class="res-desc">Developed a microcontroller-based robotic arm capable of wireless multi-directional control, demonstrating practical applications in robotics, automation, and embedded systems engineering.</div>
+        <div class="res-venue">IEEE ICPEICES &mdash; July 2016 &mdash; DOI: 10.1109/ICPEICES.2016.7853105</div>
+        <div class="res-desc">Co-authored an IEEE conference paper on a multi-modal robotic arm system designed for remote operation across Wi-Fi, Bluetooth, hand gestures, voice commands, smartphone tilt, and conventional remote control.</div>
+        <div class="res-tags">
+          <span class="res-tag">IEEE Publication</span>
+          <span class="res-tag">Robotics</span>
+          <span class="res-tag">Embedded Systems</span>
+          <span class="res-tag">Wireless Control</span>
+          <span class="res-tag">Human-Machine Interaction</span>
+        </div>
+        <div class="res-highlights">
+          <div class="res-highlight"><div class="res-highlight-dot"></div><div>Published in the 2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems.</div></div>
+          <div class="res-highlight"><div class="res-highlight-dot"></div><div>Research keywords in the paper metadata include cloud server integration, Wi-Fi, Bluetooth, hand-gesture recognition, voice control, smartphone tilt control, and remote control.</div></div>
+          <div class="res-highlight"><div class="res-highlight-dot"></div><div>Listed as a co-author alongside a multi-member undergraduate research team, reflecting early hands-on work in applied robotics and system design.</div></div>
+        </div>
+        <div class="res-actions">
+          <a class="res-link" href="assets/Mobile_Quad-Controlled_wireless_Robotic_Arm.pdf" target="_blank" rel="noreferrer">Open Paper</a>
+          <a class="res-link" href="https://doi.org/10.1109/ICPEICES.2016.7853105" target="_blank" rel="noreferrer">View DOI</a>
+          <button class="res-link res-link-fill" type="button" id="research-details-btn">View Details</button>
+        </div>
       </div>
     </div>
   </section>
@@ -475,38 +514,38 @@ main{padding-top:var(--nav-h)}
     <p class="sec-label">Technical Expertise</p>
     <h2 class="sec-title">Skills</h2>
     <div class="sk-outer">
-      <div>
-        <div class="sk-group-title">Programming and Data Engineering</div>
+      <div class="sk-tile">
+        <div class="sk-group-title">Programming &amp; Data Engineering</div>
         <div class="sk-tags">
           <span class="sk-tag">Python</span><span class="sk-tag">SQL</span><span class="sk-tag">PySpark</span>
           <span class="sk-tag">Apache Spark</span><span class="sk-tag">ETL Pipelines</span><span class="sk-tag">BigQuery</span><span class="sk-tag">Airflow</span>
         </div>
       </div>
-      <div>
+      <div class="sk-tile">
         <div class="sk-group-title">Cloud Platforms</div>
         <div class="sk-tags">
           <span class="sk-tag">AWS</span><span class="sk-tag">Google Cloud Platform</span><span class="sk-tag">Azure</span><span class="sk-tag">Databricks</span><span class="sk-tag">Vertex AI</span>
         </div>
       </div>
-      <div>
-        <div class="sk-group-title">AI / ML and Generative AI</div>
+      <div class="sk-tile">
+        <div class="sk-group-title">AI / ML &amp; Generative AI</div>
         <div class="sk-tags">
           <span class="sk-tag">TensorFlow</span><span class="sk-tag">NLP</span><span class="sk-tag">Conversational AI</span><span class="sk-tag">LLMs</span><span class="sk-tag">AI Agents</span><span class="sk-tag">LangChain</span><span class="sk-tag">Computer Vision</span>
         </div>
       </div>
-      <div>
-        <div class="sk-group-title">Analytics and Visualization</div>
+      <div class="sk-tile">
+        <div class="sk-group-title">Analytics &amp; Visualization</div>
         <div class="sk-tags">
           <span class="sk-tag">Tableau</span><span class="sk-tag">Looker</span><span class="sk-tag">Alteryx</span><span class="sk-tag">KPI Dashboards</span>
         </div>
       </div>
-      <div>
-        <div class="sk-group-title">Product and Agile</div>
+      <div class="sk-tile">
+        <div class="sk-group-title">Product &amp; Agile</div>
         <div class="sk-tags">
           <span class="sk-tag">Product Roadmapping</span><span class="sk-tag">Agile / Scrum</span><span class="sk-tag">Jira</span><span class="sk-tag">Stakeholder Management</span><span class="sk-tag">RICE Framework</span><span class="sk-tag">MoSCoW</span>
         </div>
       </div>
-      <div>
+      <div class="sk-tile">
         <div class="sk-group-title">Architecture</div>
         <div class="sk-tags">
           <span class="sk-tag">REST APIs</span><span class="sk-tag">Microservices</span><span class="sk-tag">Distributed Systems</span>
@@ -539,6 +578,34 @@ main{padding-top:var(--nav-h)}
         <div class="cert-body">
           <div class="cert-issuer">AI Systems Design</div>
           <div class="cert-name">Generative AI and AI Agents System Design Certification</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img" style="background:linear-gradient(135deg,#054ada 0%,#1f70c1 100%)">IBM</div>
+        <div class="cert-body">
+          <div class="cert-issuer">IBM &mdash; <span style="color:var(--gold);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase">In Progress</span></div>
+          <div class="cert-name">RAG and Agentic AI</div>
+        </div>
+      </div>
+      <div class="cert-card" style="opacity:.75">
+        <div class="cert-img" style="background:linear-gradient(135deg,#4285f4 0%,#0f9d58 50%,#fbbc05 75%,#ea4335 100%)">G</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Google &mdash; <span style="color:var(--muted);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase">Expired</span></div>
+          <div class="cert-name">Certified Looker Developer</div>
+        </div>
+      </div>
+      <div class="cert-card" style="opacity:.75">
+        <div class="cert-img" style="background:linear-gradient(135deg,#4285f4 0%,#0f9d58 50%,#fbbc05 75%,#ea4335 100%)">G</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Google &mdash; <span style="color:var(--muted);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase">Expired</span></div>
+          <div class="cert-name">Professional TensorFlow Developer</div>
+        </div>
+      </div>
+      <div class="cert-card" style="opacity:.75">
+        <div class="cert-img" style="background:linear-gradient(135deg,#4285f4 0%,#0f9d58 50%,#fbbc05 75%,#ea4335 100%)">G</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Google &mdash; <span style="color:var(--muted);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase">Expired</span></div>
+          <div class="cert-name">Professional Data Engineer</div>
         </div>
       </div>
     </div>
@@ -685,6 +752,7 @@ main{padding-top:var(--nav-h)}
     <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
     <div class="modal-body">
       <div class="modal-client" id="modal-client"></div>
+      <div class="modal-meta" id="modal-meta"></div>
       <div class="modal-title" id="modal-title"></div>
       <div class="modal-tags" id="modal-tags"></div>
       <div class="modal-section-lbl">Key Impacts</div>
@@ -711,50 +779,94 @@ const projectData = [
   {
     id:'healthcare', img:svgs.healthcare,
     grad:'linear-gradient(135deg,#0891b2 0%,#0e7490 100%)',
-    client:'Northwell Health', tags:['AI','NLP','OCR','Healthcare'],
+    bgImg:'assets/images/proj-healthcare.svg',
+    client:'Northwell Health', role:'AI/ML Data Engineer', company:'SpringML',
+    tags:['AI','NLP','OCR','Healthcare','Invoice Processing'],
     name:'AI Healthcare Invoice Processing Automation',
-    desc:'Hybrid OCR + NLP architecture to process 30+ invoice formats without retraining.',
-    impacts:['Accuracy improved from 65% to 90%','Processing time reduced by 50%','Avoided 40% retraining cost increase','Generated $2M follow-on engagement'],
-    full:'Built a flexible document intelligence pipeline combining traditional OCR with transformer-based NLP to handle 30+ diverse invoice formats across Northwell Health\'s multi-facility revenue cycle. The hybrid approach eliminated the need for costly model retraining for each new format while maintaining clinical billing accuracy, ultimately generating a $2M follow-on engagement.'
+    desc:'Hybrid OCR + NLP pipeline to handle 30+ invoice formats without retraining — improving accuracy from 65% to 90%.',
+    impacts:['Extraction accuracy: 65% → 90%','Processing time reduced by 50%','Avoided ~40% retraining cost increase','Generated $2M in follow-on engagement'],
+    full:'<strong>The Challenge</strong>\nNorthwell Health\'s invoice processing pipeline was breaking down at scale. Built around a fixed set of templates, it worked only when layouts were familiar — but as vendor count grew past 30 formats, accuracy fell, manual review escalated, and the path to scaling became unclear.\n\n<strong>Solution</strong>\nThe pipeline was redesigned into a hybrid OCR + NLP architecture. OCR extracts raw text; semantic field classification determines what each field means — not just where it appears on the page. This made the system format-agnostic without requiring a full rebuild.\nCritical fields were prioritized: provider name, invoice number, service date, billing amount, and downstream billing codes. Extraction and validation logic was built using content patterns and contextual cues rather than template coordinates.\nDocument preprocessing was improved to reduce OCR noise before the NLP layer, increasing downstream accuracy.\nEngineers, data scientists, and client stakeholders collaborated throughout to validate output quality against operational requirements.\n\n<strong>Stack &amp; Approach</strong>\nOCR · Transformer-based NLP · Semantic field classification · Content pattern matching · Scanned document preprocessing\n\n<strong>Results</strong>\nExtraction accuracy: 65% → 90%\nProcessing time: reduced by 50%\nAvoided ~40% increase in retraining costs\n$2M in follow-on engagement from client confidence in production readiness\n\n<strong>Key Insight</strong>\nThe original system was brittle because it treated invoices as images with fixed coordinates, not as documents with meaning. Shifting to semantic understanding made the pipeline format-agnostic — the right level of change for the client\'s constraints, not the most technically ambitious one.'
+  },
+  {
+    id:'northwell-checkin', img:svgs.healthcare,
+    grad:'linear-gradient(135deg,#0f172a 0%,#0c1f3a 100%)',
+    bgImg:'assets/images/proj-healthcheckin.svg',
+    client:'Google', role:'AI/ML Data Engineer — Technical Lead', company:'SpringML',
+    tags:['Computer Vision','GCP','BigQuery','Real-Time','OCR','Facial Recognition','Security'],
+    name:'Real-Time Employee Health Check-In System',
+    desc:'Event-driven AI pipeline for Google\'s internal office — ID scan + facial recognition pulling health records in under 2 seconds.',
+    impacts:['<2s end-to-end response — verified across 10K+ sessions','Adoption: 60% → 90% within 3 months','100% compliance audit pass — zero findings'],
+    full:'<strong>The Challenge</strong>\nGoogle needed a fast, secure, and scalable employee health check-in system for internal office operations. Employees would scan their ID and face; within 2 seconds the system would retrieve their health record from the cloud and surface recommendations. The critical blocker: the OCR scanner was mismatching employee IDs during early deployment, pulling incorrect records — a data integrity failure that couldn\'t go to production.\n\n<strong>Solution</strong>\nAn event-driven pipeline was architected end-to-end: Scan (ID + Face) → OCR/Face Match (GCP Document AI) → Record Retrieval (BigQuery) → Health Insights Engine → Recommendations (Looker Dashboard).\nAI & OCR layer: GCP Document AI handles OCR; a custom facial recognition model verifies identity in under 2 seconds. Input validation and parsing were optimized to reduce false positives from scanning artifacts.\nBackend: BigQuery powers high-speed record access. An API layer with auto-retry logic and ID+Timestamp-based local cache validation prevents stale cache from causing mismatches during latency spikes — this was the root cause of the mismatch bug.\nSecurity: AES-256 encryption, RBAC, and full audit logging across all data flows.\nFrontend: Built in JavaScript/HTML/CSS with camera and ID scanning module integration. Mobile-first design for compatibility across office kiosks and tablets.\n\n<strong>The Debugging Problem</strong>\nDuring testing, the system was pulling incorrect records after ID scans. Root cause analysis through logs revealed: OCR was accurate ~90% of the time, but when API calls were delayed, the system fell back to stale cache — matching the wrong ID. Fixed by switching to ID+Timestamp cache validation, debouncing and throttling API calls to avoid rate-limiting, and introducing end-to-end burst scenario tests with real employee data.\n\n<strong>Stack &amp; Approach</strong>\nGCP Document AI · Custom facial recognition · BigQuery · Looker · AES-256 encryption · RBAC · Audit logging · JavaScript/HTML/CSS · Event-driven architecture\n\n<strong>Results</strong>\n&lt;2s response time verified across 10,000+ check-in sessions\n100% compliance audit pass — zero findings\nEmployee adoption: 60% → 90% within 3 months\nID mismatch bug eliminated — 95% reduction after cache fix; zero in final rollout\n\n<strong>Key Insight</strong>\nThe mismatch bug looked like an OCR problem but was actually a caching architecture problem. Deep-diving into logs rather than assuming the ML layer was at fault was the critical step — in real-time systems with async API calls, state management is where reliability breaks down.'
   },
   {
     id:'applemaps', img:svgs.map,
     grad:'linear-gradient(135deg,#374151 0%,#1f2937 100%)',
-    client:'Apple', tags:['Data Engineering','GIS','Automation'],
+    bgImg:'assets/images/proj-applemaps.svg',
+    client:'Apple', role:'Senior Data Engineer', company:'GlobalLogic',
+    tags:['Data Engineering','GIS','Automation','Cloud'],
     name:'Apple Maps Workflow Automation',
-    desc:'Automated manual GIS map data correction pipeline, cutting a 4-week cycle to 8 days.',
-    impacts:['Update cycle: 4 weeks → 8 days','64 engineering hours saved each month','Improved map accuracy for millions of users'],
-    full:'Designed and implemented an automated GIS data pipeline for Apple Maps that replaced a manual correction workflow spanning teams across multiple geographies. By automating data quality checks and corrections, the update cycle was reduced from 4 weeks to 8 days, freeing 64 engineering hours per month and significantly improving map data accuracy for millions of end users worldwide.'
+    desc:'Automated GIS map data correction pipeline, cutting a 4-week update cycle to 8 days and saving 64 engineering hours monthly.',
+    impacts:['Update cycle: 4 weeks → 8 days','64 engineering hours saved per month','Map corrections reach millions of users faster'],
+    full:'<strong>The Challenge</strong>\nApple Maps depended on recurring corrections to geographic datasets, but each update cycle took 4 weeks of manual GIS work. For a product where data freshness directly affects user experience at scale, this was a meaningful bottleneck — and the manual process would only get harder to maintain as map coverage expanded.\n\n<strong>Solution</strong>\nThe existing correction workflow was mapped end-to-end — ingestion, validation, correction, transformation, output — to identify which stages were repetitive and suitable for automation.\nA cloud-based data framework was designed to automate the highest-friction stages: validation logic, correction checks, and data transformation. Rolled out incrementally so teams could adopt it without disrupting existing map quality standards.\nProduct engineers and GIS specialists were brought in throughout to ensure the automated logic reflected real correction requirements.\nException monitoring and cycle-time tracking were added to give the team clear visibility into performance gains and surface edge cases quickly.\n\n<strong>Stack &amp; Approach</strong>\nCloud data pipeline · GIS workflow automation · Incremental rollout strategy · Exception monitoring · Performance tracking\n\n<strong>Results</strong>\nMap update cycle: 4 weeks → 8 days\n64 engineering hours saved per month\nFaster correction delivery to millions of Apple Maps users globally\n\n<strong>Key Insight</strong>\nThe most effective automation wasn\'t the most technically complex — it was targeting the highest-friction manual steps within the existing process. That kept adoption risk low and delivered measurable results without requiring a full platform replacement.'
   },
   {
     id:'pothole', img:svgs.road,
     grad:'linear-gradient(135deg,#d97706 0%,#b45309 100%)',
-    client:'City of Memphis', tags:['Computer Vision','Deep Learning','Smart City'],
-    name:'Pothole Detection CV System',
-    desc:'Computer vision model with targeted image augmentation for weather robustness.',
-    impacts:['Detection accuracy: 70% → 90%+','Estimated annual savings of ~$150K','Improved road safety for 65,000 residents'],
-    full:'Developed a computer vision system for detecting road potholes using deep learning with targeted image augmentation to handle diverse weather and lighting conditions. The model was delivered ahead of a critical city funding demo, providing Memphis with an automated infrastructure monitoring tool that improves road safety for 65,000 residents and generates an estimated $150K in annual savings through proactive maintenance.'
+    bgImg:'assets/images/proj-pothole.svg',
+    client:'City of Memphis', role:'AI/ML Data Engineer', company:'SpringML',
+    tags:['Computer Vision','Deep Learning','Smart City','Public Sector'],
+    name:'Pothole Detection Computer Vision System',
+    desc:'Deep learning CV model with targeted image augmentation for real-world road conditions — achieving 90%+ detection accuracy.',
+    impacts:['Detection accuracy: 70% → 90%+','~$150K estimated annual savings','Improved road safety for 65,000 residents'],
+    full:'<strong>The Challenge</strong>\nThe City of Memphis needed a scalable way to detect potholes from road images and prioritize maintenance. The hard part wasn\'t building a model — it was making one that would hold up under real-world conditions: variable lighting, weather, road texture, and camera quality across the entire city.\n\n<strong>Solution</strong>\nA training dataset was constructed with deliberate diversity — road images from varied environments, not just clean examples. Targeted augmentation (brightness, contrast, noise, angle variation) was applied to make the model robust against real-world visual inconsistencies rather than just lab conditions.\nIterative evaluation focused on failure patterns: false positives from shadows and road patches were the main accuracy drag, and training adjustments were targeted specifically at those failure modes.\nSystem outputs were designed with operational usability in mind — the goal was to help maintenance crews prioritize repairs, not just produce detections in isolation.\n\n<strong>Stack &amp; Approach</strong>\nComputer vision · Deep learning · Image augmentation · Iterative model evaluation · Failure-mode analysis · Deployment usability design\n\n<strong>Results</strong>\nDetection accuracy: 70% → 90%+\n~$150K estimated annual savings through better maintenance prioritization\nImproved road safety for ~65,000 residents\n\n<strong>Key Insight</strong>\nModel accuracy in a demo environment is easy to inflate. The real engineering challenge was making the system dependable on messy, inconsistent real-world inputs — which required intentional data strategy, not just model tuning.'
+  },
+  {
+    id:'raidohub-validation', img:svgs.chart,
+    grad:'linear-gradient(135deg,#065f46 0%,#022c22 100%)',
+    bgImg:'assets/images/proj-raidohub.svg',
+    client:'RaidoHub', role:'AI Product & Strategy Intern', company:'RaidoHub',
+    tags:['ML Validation','Predictive Analytics','Airport Operations','Data Strategy','Product'],
+    name:'Airport Passenger Traffic — ML Model Market Validation',
+    desc:'Built a dual-strategy validation framework for an ML passenger traffic model — achieving 95% accuracy without direct airport data feeds.',
+    impacts:['95% validation accuracy achieved','Dual-strategy framework adopted into company roadmap','Validated using Amtrak + public datasets — no direct airport feeds needed'],
+    full:'<strong>The Challenge</strong>\nRaidoHub\'s core ML model estimated passenger traffic at airports — but before it could be sold to customers, its predictions needed to be validated against real-world data. The problem: clean, raw passenger count data from airports was nearly impossible to obtain without expensive direct data agreements. Public sources were aggregated, indirect, or built on opaque assumptions. There was no existing process, no clear data budget, and no defined standard for how accurate "accurate enough" needed to be.\n\n<strong>Approach</strong>\nAmbiguity was removed before touching any data. Targeted discovery conversations with sales and leadership clarified three things: available budget for data acquisition, openness to third-party vendors, and whether the validation needed to be manual or automated. Those answers shaped the entire strategy.\nVendor interviews were conducted with third-party airport and traveler analytics providers to evaluate cost, coverage, and data quality. Internal sessions with engineers helped map how data flowed through the existing ML system and where validation could plug in.\nPublic data from airport websites and government portals was assessed. Most sources didn\'t provide raw passenger counts — they reported flight movements, load factors, or indirect proxies. A statistical estimation approach was developed to infer passenger volumes from these indirect signals.\nA dual-strategy validation framework was designed:\n— Smaller airports: purchase accurate passenger data from affordable third-party vendors\n— Larger airports: use public data combined with custom estimation techniques\nThe model was validated against Amtrak ridership data as a comparable ground-truth source, applying the same estimation methodology.\n\n<strong>Stack &amp; Approach</strong>\nML model evaluation · Statistical estimation · Vendor assessment · Public data analysis · Dual-strategy framework design · Stakeholder discovery\n\n<strong>Results</strong>\n95% validation accuracy achieved against real-world benchmarks\nValidation framework adopted as part of RaidoHub\'s ongoing market strategy\nNo direct airport data contracts required — cost-effective methodology using public + vendor sources\n\n<strong>Key Insight</strong>\nWhen data doesn\'t exist in the form you need, the work shifts from analysis to data strategy. Designing a framework that works within real constraints — budget, access, time — is as technically demanding as any model work, and often more directly tied to business outcomes.'
   },
   {
     id:'tmobile-dashboard', img:svgs.chart,
     grad:'linear-gradient(135deg,#db2777 0%,#be185d 100%)',
-    client:'T-Mobile', tags:['Analytics','SQL','Tableau','Business Intelligence'],
+    bgImg:'assets/images/proj-dashboard.svg',
+    client:'T-Mobile', role:'Senior Data Engineer', company:'GlobalLogic',
+    tags:['Analytics','SQL','Tableau','Business Intelligence','Data Modeling'],
     name:'Customer Inactivity Intelligence Dashboard',
-    desc:'SQL pipelines + Tableau dashboards unifying 30+ tables to identify inactive customers.',
+    desc:'SQL pipelines + Tableau dashboards unifying 30+ tables into a single trusted inactivity signal for retention teams.',
     impacts:['Unified inactivity definition across all teams','Enabled targeted retention campaigns','Improved analytics trust and decision-making'],
-    full:'Built end-to-end analytics pipelines joining 30+ data tables across billing, messaging, and usage data sources to create a unified customer inactivity signal. Delivered interactive Tableau dashboards giving product and marketing teams a consistent, trusted view of inactive customers — enabling targeted retention campaigns and improving data-driven decision-making across T-Mobile teams.'
+    full:'<strong>The Challenge</strong>\nT-Mobile\'s teams were measuring customer inactivity differently across business units — different definitions, different source tables, different logic. The data existed across 30+ tables, but inconsistent measurement made reporting untrustworthy and retention campaigns harder to run effectively.\n\n<strong>Solution</strong>\nDefinition alignment came first, before a single query was written. Stakeholders across teams were engaged to establish shared inactivity logic — the most critical step, because building on inconsistent definitions would have just produced a prettier version of the same problem.\nSQL pipelines were built to unify 30+ tables — customer activity signals, usage patterns, billing data, messaging behavior — into a single analytics-ready inactivity layer.\nTableau dashboards were delivered to let teams monitor inactivity trends, segment at-risk customers by behavior pattern, and act on retention insights. Designed for actionability, not just reporting.\nThe pipeline was built for maintainability: clear table dependencies, consistent data logic, and documentation so the dashboards stayed trustworthy as underlying data changed.\n\n<strong>Stack &amp; Approach</strong>\nSQL · Tableau · Data modeling · Stakeholder alignment · KPI definition workshops · Pipeline documentation\n\n<strong>Results</strong>\nSingle unified inactivity definition across all T-Mobile business units\nEarlier, more reliable identification of at-risk customer segments\nEnabled more targeted retention campaigns with consistent cross-team data\nImproved confidence in analytics for real business decisions\n\n<strong>Key Insight</strong>\nThe hardest part of analytics is often not the visualization — it\'s getting everyone to trust the same numbers. Solving the definition problem first made everything downstream more valuable.'
   },
   {
     id:'tmobile-pipeline', img:svgs.pipeline,
     grad:'linear-gradient(135deg,#7c3aed 0%,#6d28d9 100%)',
-    client:'T-Mobile', tags:['Data Engineering','PySpark','Architecture','Cloud'],
+    bgImg:'assets/images/proj-pipeline.svg',
+    client:'T-Mobile', role:'Senior Data Engineer', company:'GlobalLogic',
+    tags:['Data Engineering','PySpark','Architecture','Cloud','Scalability'],
     name:'Scalable Data Pipeline Architecture',
-    desc:'Redesigned pipeline architecture to handle 3× higher data volume for personalized offers.',
+    desc:'Redesigned T-Mobile\'s personalized offer pipeline to handle 3× data volume — validated with a prototype before stakeholder sign-off.',
     impacts:['Handled 3× higher data volume','Significantly improved processing performance','Reduced long-term infrastructure cost'],
-    full:'Led the architectural redesign of T-Mobile\'s personalized offer delivery pipeline using PySpark and cloud-native infrastructure. Implemented A/B comparison testing between old and new architectures to validate performance improvements. The redesigned system handles 3× the previous data volume while reducing infrastructure costs and eliminating processing bottlenecks that were blocking the personalization roadmap.'
+    full:'<strong>The Challenge</strong>\nT-Mobile\'s personalized offer delivery pipeline was approaching its scalability ceiling. As data volume and personalization use cases grew, the existing architecture was going to become a bottleneck. There was also internal pressure to stay with the familiar system — changing direction mid-project carries real cost and organizational friction.\n\n<strong>Solution</strong>\nA prototype of the redesigned architecture was built first — generating concrete, comparable performance evidence before any stakeholder conversation. The prototype demonstrated 3× higher data volume capacity with significantly improved runtime on the same workloads.\nThat evidence was used to facilitate a grounded stakeholder discussion — the decision was backed by data, not engineering preference, which reduced resistance to changing direction mid-project.\nThe pipeline was redesigned around the most critical scalability bottlenecks using PySpark and cloud-native infrastructure, focused on processing efficiency and long-term maintainability rather than a ground-up rebuild.\n\n<strong>Stack &amp; Approach</strong>\nPySpark · Cloud-native pipeline architecture · Prototype-driven validation · A/B architecture comparison · Stakeholder alignment\n\n<strong>Results</strong>\n3× higher data volume handled\nSignificantly improved processing performance\nReduced long-term infrastructure cost vs. scaling the older design\nFuture-ready foundation for growing personalized offer use cases\n\n<strong>Key Insight</strong>\nThe most important work wasn\'t the architecture redesign itself — it was building evidence before asking for buy-in. A prototype that shows the performance difference is more persuasive than any technical argument, especially when there\'s pressure to stay the course.'
+  },
+  {
+    id:'dowjones-chatbot', img:svgs.pipeline,
+    grad:'linear-gradient(135deg,#1e3a5f 0%,#0a1628 100%)',
+    bgImg:'assets/images/proj-chatbot.svg',
+    client:'Dow Jones', role:'AI/ML Data Engineer', company:'SpringML',
+    tags:['Conversational AI','NLP','Slack Integration','Cloud','Agile'],
+    name:'AI Slack Chatbot — Password Reset & Employee Onboarding',
+    desc:'Built a secure Slack-integrated AI chatbot for IT helpdesk automation — delivered in two phases after recovering from a mid-project integration failure.',
+    impacts:['92% chatbot accuracy — exceeded 85% target','Phased delivery recovered a slipping deadline','$3M in follow-on projects from client trust earned'],
+    full:'<strong>The Challenge</strong>\nDow Jones needed an AI-powered Slack chatbot to handle two high-volume IT requests: employee password resets and new hire onboarding support. The project involved secure cloud integrations, encryption requirements, and Slack API dependencies — and partway through development, a version incompatibility with Slack\'s latest release broke the integration and threatened the entire timeline.\n\n<strong>Solution</strong>\nWhen the Slack version incompatibility surfaced, full ownership was taken. The engineering team was assembled to isolate the root cause, the integration approach was rebuilt from scratch, and tasks were reassigned based on team member strengths.\nThe client was contacted proactively — before they had to ask. The technical issue, its timeline impact, and available options were clearly laid out. A phased delivery plan was presented that would deliver value earlier rather than delaying the entire project.\nPhase 1 — Password Reset: The most business-critical feature was prioritized. A secure, Slack-native password reset flow was built with cloud-based identity validation and encrypted credential handling and delivered first.\nPhase 2 — Onboarding Support: A document-aware chatbot was built allowing new hires to access company policies, setup guides, and FAQs through natural language queries in Slack.\nDaily standups were set up to track progress against the new phased milestones. A continuous client feedback loop was maintained throughout both phases.\nA clear success metric was defined upfront: 85%+ chatbot accuracy in real responses before full deployment.\n\n<strong>Stack &amp; Approach</strong>\nConversational AI · NLP · Slack API integration · AES encryption · Cloud-based identity management · Agile phased delivery · Stakeholder communication\n\n<strong>Results</strong>\n92% chatbot accuracy — exceeded the 85% target\nDelivery recovered via two-phase plan: Phase 1 on time, full release one week late\nClient cited transparency and execution quality; awarded SpringML $3M in follow-on projects\n\n<strong>Key Insight</strong>\nThe costliest part of this project wasn\'t the technical failure — it was the original plan that didn\'t account for integration risk and had no buffer. The recovery worked because of two things: honest client communication before they had to ask, and a phased structure that gave the client value while the team regrouped.'
   },
   {
     id:'nucleate', img:svgs.maternal,
+    bgImg:'assets/images/nucleate.webp',
     grad:'linear-gradient(135deg,#f43f5e 0%,#be123c 100%)',
     client:'Nucleate Activator — San Antonio, TX', tags:['Digital Health','Maternal Health','AI','Product Development','Startup'],
     name:'Nucleate Entrepreneurship Program — Finalist',
@@ -765,13 +877,30 @@ const projectData = [
   {
     id:'glp', img:svgs.globe,
     grad:'linear-gradient(135deg,#0284c7 0%,#0369a1 100%)',
-    client:'SMU Cox — Global Leadership Program', tags:['Consulting','Strategy','Leadership','International'],
-    name:'Global Leadership Program — Consultant',
-    desc:'Selected consultant delivering strategic recommendations to international business clients.',
-    impacts:['Delivered high-impact international consulting engagement','Developed cross-cultural market entry strategy','Presented to executive-level stakeholders','Applied MBA frameworks to real business challenges'],
-    full:'Selected as a consultant for the SMU Cox School of Business Global Leadership Program — one of the school\'s signature experiential learning initiatives. Worked in a cross-functional team to analyze strategic challenges for an international business client, conducting market analysis, competitive benchmarking, and stakeholder interviews. Delivered a comprehensive strategic recommendation deck to senior executive leadership, applying MBA frameworks to drive real-world business decisions.'
+    bgImg:'assets/images/proj-glp.svg',
+    client:'SMU Cox — Global Leadership Program — Radiobotics U.S. Market Entry', tags:['Strategy Consulting','Marketing Consulting','Go-to-Market','Healthcare AI','U.S. Market Entry','Regulatory Strategy'],
+    name:'Global Leadership Program — Strategy &amp; Marketing Consultant',
+    desc:'Built a U.S. market-entry, sales, and physician-messaging strategy for Radiobotics, a Danish healthtech AI company focused on musculoskeletal radiology.',
+    impacts:['Recommended phased U.S. entry via fracture-only 510(k) first, with De Novo preparation for broader functionality','Advised Dallas as the initial U.S. hub and recommended an internal sales model over a reseller approach','Developed physician-trust messaging around augmented intelligence to support adoption','Outlined targeted pilot advertising, U.S.-specific landing page strategy, and lead-generation metrics','Positioned Radiobotics around emergency workflow value, product differentiation, and market-entry sequencing'],
+    full:'<strong>Engagement Context</strong>\nAs part of the <strong>SMU Cox Global Leadership Program</strong>, our team served as strategy and marketing consultants for <strong>Radiobotics</strong>, a Danish healthtech scale-up building AI solutions for musculoskeletal radiology. The project focused on helping the company prepare for a strategic U.S. market entry.\n\n<strong>Project Objective</strong>\nOur objective was to guide Radiobotics in establishing a <strong>strategic U.S. market entry</strong> by validating product-market fit, optimizing regulatory pathway selection, and aligning sales and messaging strategy to accelerate adoption and build long-term market advantage.\n\n<strong>My Role — Strategy &amp; Marketing Consultant</strong>\nI worked on structuring the market-entry recommendation across strategy, positioning, and commercialization. The work included synthesizing market and competitive inputs, shaping go-to-market logic, and translating analysis into clear recommendations that connected regulatory choices, customer adoption, and sales execution.\n\n<strong>Key Recommendations</strong>\nWe recommended a <strong>phased go-to-market approach</strong>: enter the U.S. first through a fracture-detection-focused <strong>510(k)</strong> pathway to gain early traction and validate messaging, while preparing a broader <strong>De Novo</strong> pathway for full functionality later. We also recommended <strong>Dallas, Texas</strong> as the U.S. hub and advised against a reseller-heavy model in favor of an <strong>internal sales team</strong> that could build stronger physician trust and customer feedback loops.\n\n<strong>Marketing &amp; Positioning Strategy</strong>\nA major part of the work centered on how to position RBfracture for U.S. adoption. We recommended framing the product as <strong>augmented intelligence</strong> rather than autonomous AI, emphasizing assistive clinical value instead of replacement. The launch plan included targeted pilot advertising campaigns, a U.S.-specific landing page, messaging tailored to radiologists and ER physicians, and lead-generation metrics such as demo requests and stakeholder engagement.\n\n<strong>Why It Was Strategic</strong>\nThe recommendation connected multiple dimensions of entry strategy at once: product differentiation, FDA pathway tradeoffs, physician adoption behavior, sales model design, and launch sequencing. The project sharpened how I think about commercializing technical products in regulated markets, where trust, workflow fit, and positioning are just as important as the product itself.'
   }
 ];
+
+const researchData = {
+  id:'mobile-quad',
+  img:svgs.robot,
+  grad:'linear-gradient(135deg,#7c3aed 0%,#4338ca 100%)',
+  client:'IEEE ICPEICES — July 2016',
+  tags:['Research','IEEE Publication','Robotics','Embedded Systems','Wireless Control','Human-Machine Interaction'],
+  name:'Mobile Quad Controlled Wireless Robotic Arm',
+  impacts:[
+    'Published in the 2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems',
+    'DOI: 10.1109/ICPEICES.2016.7853105',
+    'Paper metadata lists Wi-Fi, Bluetooth, hand-gesture recognition, voice control, smartphone tilt control, remote control, and cloud-server integration',
+    'Co-authored with Aishwarya N. Reganti, Surekha Ananthapalli, B. Chiranjith Viswa Mohan, R. Mounica, and V.K. Mittal'
+  ],
+  full:'<strong>Publication Details</strong>\nThis work was published in the <strong>2016 IEEE 1st International Conference on Power Electronics, Intelligent Control and Energy Systems (ICPEICES)</strong>, with publication pages listed as 1 to 5 and DOI <strong>10.1109/ICPEICES.2016.7853105</strong>. The paper metadata lists the publisher as IEEE and identifies the co-authors as Aishwarya N. Reganti, Surekha Ananthapalli, B. Chiranjith Viswa Mohan, R. Mounica, and V.K. Mittal.\n\n<strong>What the Paper Covers</strong>\nFrom the document metadata, the paper centers on a <strong>quad-controlled wireless robotic arm</strong> designed to support several interaction methods: Wi-Fi, Bluetooth, hand-gesture recognition, voice control, smartphone tilt control, and standard remote control. It also references cloud-server integration, suggesting an architecture that combined embedded robotics with network-enabled control.\n\n<strong>Why It Stands Out</strong>\nThis project shows early applied work in robotics, embedded systems, wireless communication, and human-machine interaction. Even at the undergraduate level, it reflects an interest in building systems that are not only technically functional, but also intuitive for users through multiple control interfaces.\n\n<strong>Relevance to My Portfolio</strong>\nThe publication connects directly to the technical themes that continued through later roles: translating engineering ideas into usable systems, working across hardware-software boundaries, and exploring how intelligent interfaces can improve real-world operations. It also represents an early milestone in research communication through an IEEE conference publication.'
+};
 
 // Render project cards
 const grid = document.getElementById('proj-grid');
@@ -779,13 +908,16 @@ projectData.forEach(p => {
   const card = document.createElement('div');
   card.className = 'proj-card';
   card.id = p.id;
+  const imgStyle = p.bgImg
+    ? `background:url('${p.bgImg}') center/cover no-repeat`
+    : `background:${p.grad}`;
   card.innerHTML =
-    `<div class="proj-img" style="background:${p.grad}">${p.img}</div>` +
+    `<div class="proj-img" style="${imgStyle}">${p.bgImg ? '' : p.img}</div>` +
     `<div class="proj-body">` +
       `<div class="proj-client">${p.client}</div>` +
       `<div class="proj-name">${p.name}</div>` +
       `<div class="proj-desc">${p.desc}</div>` +
-      `<div class="proj-impacts">${p.impacts.map(i=>`<div class="imp"><div class="imp-dot"></div>${i}</div>`).join('')}</div>` +
+      `<div class="proj-impacts">${p.impacts.slice(0,3).map(i=>`<div class="imp"><div class="imp-dot"></div>${i}</div>`).join('')}</div>` +
       `<div class="proj-cta"><span class="proj-cta-btn">View Details &#8599;</span></div>` +
     `</div>`;
   card.addEventListener('click', () => openModal(p));
@@ -798,9 +930,14 @@ const modalClose = document.getElementById('modal-close');
 
 function openModal(p) {
   const img = document.getElementById('modal-img');
-  img.style.background = p.grad;
-  img.innerHTML = p.img;
+  img.style.background = p.bgImg ? `url('${p.bgImg}') center/cover no-repeat` : p.grad;
+  img.innerHTML = p.bgImg ? '' : p.img;
   document.getElementById('modal-client').textContent = p.client;
+  const metaEl = document.getElementById('modal-meta');
+  if (p.role && p.company) {
+    metaEl.innerHTML = `<strong>${p.role}</strong><span class="modal-meta-sep">·</span>${p.company}`;
+    metaEl.style.display = 'flex';
+  } else { metaEl.style.display = 'none'; }
   document.getElementById('modal-title').textContent = p.name;
   document.getElementById('modal-tags').innerHTML = p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('');
   document.getElementById('modal-impacts').innerHTML = p.impacts.map(i=>`<div class="modal-imp"><div class="modal-imp-dot"></div>${i}</div>`).join('');
@@ -818,6 +955,30 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 function closeModal() {
   modal.classList.remove('open');
   document.body.style.overflow = '';
+}
+
+const researchCard = document.getElementById('mobile-quad');
+const researchDetailsBtn = document.getElementById('research-details-btn');
+if (researchCard) {
+  researchCard.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    openModal(researchData);
+  });
+  researchCard.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(researchData);
+    }
+  });
+  researchCard.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => e.stopPropagation());
+  });
+}
+if (researchDetailsBtn) {
+  researchDetailsBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    openModal(researchData);
+  });
 }
 
 // Highlight a project card (called from education badge links)

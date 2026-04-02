@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#0c1f3a"/>
+    </linearGradient>
+    <linearGradient id="step" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#0e4f6b"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="rgba(6,182,212,0.8)"/>
+    </marker>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg)"/>
+  <!-- Glow -->
+  <circle cx="300" cy="100" r="180" fill="rgba(8,145,178,0.06)"/>
+  <!-- Pipeline steps -->
+  <g transform="translate(18,38)">
+    <text x="280" y="15" font-family="sans-serif" font-size="10" fill="rgba(6,182,212,0.6)" text-anchor="middle" letter-spacing="3">EVENT-DRIVEN PIPELINE</text>
+    <!-- Step 1 -->
+    <rect x="0" y="28" width="88" height="58" rx="8" fill="rgba(8,145,178,0.18)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+    <text x="44" y="52" font-family="sans-serif" font-size="18" text-anchor="middle">🪪</text>
+    <text x="44" y="68" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="600">ID + Face</text>
+    <text x="44" y="79" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Scan</text>
+    <line x1="88" y1="57" x2="103" y2="57" stroke="rgba(6,182,212,0.7)" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Step 2 -->
+    <rect x="103" y="28" width="88" height="58" rx="8" fill="rgba(8,145,178,0.18)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+    <text x="147" y="50" font-family="sans-serif" font-size="9" fill="rgba(6,182,212,0.9)" text-anchor="middle" font-weight="700">GCP</text>
+    <text x="147" y="63" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="600">OCR + Face</text>
+    <text x="147" y="76" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Document AI</text>
+    <line x1="191" y1="57" x2="206" y2="57" stroke="rgba(6,182,212,0.7)" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Step 3 -->
+    <rect x="206" y="28" width="88" height="58" rx="8" fill="rgba(8,145,178,0.18)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+    <text x="250" y="50" font-family="sans-serif" font-size="9" fill="rgba(6,182,212,0.9)" text-anchor="middle" font-weight="700">BigQuery</text>
+    <text x="250" y="63" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="600">Medical</text>
+    <text x="250" y="76" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Record Fetch</text>
+    <line x1="294" y1="57" x2="309" y2="57" stroke="rgba(6,182,212,0.7)" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Step 4 -->
+    <rect x="309" y="28" width="88" height="58" rx="8" fill="rgba(8,145,178,0.18)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+    <text x="353" y="52" font-family="sans-serif" font-size="18" text-anchor="middle">🧠</text>
+    <text x="353" y="68" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="600">Health</text>
+    <text x="353" y="79" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Insights Engine</text>
+    <line x1="397" y1="57" x2="412" y2="57" stroke="rgba(6,182,212,0.7)" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- Step 5 -->
+    <rect x="412" y="28" width="88" height="58" rx="8" fill="rgba(8,145,178,0.18)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+    <text x="456" y="50" font-family="sans-serif" font-size="9" fill="rgba(6,182,212,0.9)" text-anchor="middle" font-weight="700">Looker</text>
+    <text x="456" y="63" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="600">Dashboard</text>
+    <text x="456" y="76" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Recommendations</text>
+  </g>
+  <!-- Metrics row -->
+  <g transform="translate(30,145)">
+    <rect x="0" y="0" width="120" height="72" rx="10" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"/>
+    <text x="60" y="32" font-family="sans-serif" font-size="26" font-weight="800" fill="#10b981" text-anchor="middle">&lt;2s</text>
+    <text x="60" y="52" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="1">RESPONSE TIME</text>
+    <text x="60" y="65" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.35)" text-anchor="middle">10K+ sessions</text>
+
+    <rect x="135" y="0" width="120" height="72" rx="10" fill="rgba(6,182,212,0.12)" stroke="rgba(6,182,212,0.35)" stroke-width="1.5"/>
+    <text x="195" y="32" font-family="sans-serif" font-size="26" font-weight="800" fill="#22d3ee" text-anchor="middle">90%</text>
+    <text x="195" y="52" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="1">ADOPTION</text>
+    <text x="195" y="65" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.35)" text-anchor="middle">up from 60%</text>
+
+    <rect x="270" y="0" width="120" height="72" rx="10" fill="rgba(139,92,246,0.12)" stroke="rgba(139,92,246,0.35)" stroke-width="1.5"/>
+    <text x="330" y="32" font-family="sans-serif" font-size="22" font-weight="800" fill="#a78bfa" text-anchor="middle">100%</text>
+    <text x="330" y="52" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="1">HIPAA AUDIT</text>
+    <text x="330" y="65" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.35)" text-anchor="middle">zero findings</text>
+
+    <rect x="405" y="0" width="145" height="72" rx="10" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.35)" stroke-width="1.5"/>
+    <text x="477" y="32" font-family="sans-serif" font-size="20" font-weight="800" fill="#f59e0b" text-anchor="middle">95% fix</text>
+    <text x="477" y="52" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="1">ID MISMATCHES</text>
+    <text x="477" y="65" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.35)" text-anchor="middle">eliminated</text>
+  </g>
+  <!-- Security badges -->
+  <text x="50" y="240" font-family="sans-serif" font-size="10" fill="rgba(139,92,246,0.7)" font-weight="600">🔒 AES-256</text>
+  <text x="140" y="240" font-family="sans-serif" font-size="10" fill="rgba(139,92,246,0.7)" font-weight="600">· RBAC</text>
+  <text x="185" y="240" font-family="sans-serif" font-size="10" fill="rgba(139,92,246,0.7)" font-weight="600">· Audit Logging</text>
+  <text x="310" y="240" font-family="sans-serif" font-size="10" fill="rgba(139,92,246,0.7)" font-weight="600">· HIPAA Compliant</text>
+  <!-- Label bar -->
+  <rect x="0" y="262" width="600" height="38" fill="rgba(0,0,0,0.4)"/>
+  <text x="20" y="286" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.9)" font-weight="600" letter-spacing="1">GCP · BigQuery · Computer Vision · HIPAA · Real-Time</text>
+</svg>
