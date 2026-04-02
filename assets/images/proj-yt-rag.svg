@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c0a00"/>
+      <stop offset="100%" style="stop-color:#3b0f0f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="rgba(239,68,68,0.7)"/>
+    </marker>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg)"/>
+  <circle cx="80" cy="60" r="120" fill="rgba(239,68,68,0.05)"/>
+  <circle cx="520" cy="240" r="100" fill="rgba(239,68,68,0.05)"/>
+  <!-- YouTube play icon -->
+  <rect x="28" y="50" width="120" height="80" rx="16" fill="rgba(239,68,68,0.18)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
+  <polygon points="72,70 72,110 108,90" fill="#ef4444" opacity="0.9"/>
+  <text x="88" y="148" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="1">VIDEO</text>
+  <!-- Pipeline arrows -->
+  <line x1="150" y1="90" x2="170" y2="90" stroke="rgba(239,68,68,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Transcript box -->
+  <rect x="170" y="60" width="100" height="58" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="182" y="74" width="55" height="5" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="182" y="85" width="76" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="182" y="95" width="65" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="182" y="105" width="70" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <text x="220" y="130" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="1">TRANSCRIPT</text>
+  <!-- Arrow -->
+  <line x1="272" y1="90" x2="292" y2="90" stroke="rgba(239,68,68,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Chunks -->
+  <rect x="292" y="55" width="90" height="68" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="300" y="63" width="74" height="10" rx="3" fill="rgba(239,68,68,0.25)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+  <rect x="300" y="78" width="74" height="10" rx="3" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.25)" stroke-width="1"/>
+  <rect x="300" y="93" width="74" height="10" rx="3" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <rect x="300" y="108" width="74" height="10" rx="3" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.15)" stroke-width="1"/>
+  <text x="337" y="136" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="1">CHUNKS</text>
+  <!-- Arrow -->
+  <line x1="384" y1="90" x2="404" y2="90" stroke="rgba(239,68,68,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- FAISS -->
+  <rect x="404" y="58" width="80" height="64" rx="8" fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.35)" stroke-width="1.5"/>
+  <text x="444" y="82" font-family="sans-serif" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">FAISS</text>
+  <text x="444" y="98" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Vector DB</text>
+  <circle cx="420" cy="112" r="3" fill="rgba(239,68,68,0.5)"/>
+  <circle cx="434" cy="112" r="3" fill="rgba(239,68,68,0.4)"/>
+  <circle cx="448" cy="112" r="3" fill="rgba(239,68,68,0.5)"/>
+  <circle cx="462" cy="112" r="3" fill="rgba(239,68,68,0.3)"/>
+  <text x="444" y="136" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="1">EMBEDDINGS</text>
+  <!-- Arrow down to LLM -->
+  <line x1="444" y1="122" x2="444" y2="158" stroke="rgba(239,68,68,0.5)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- LangChain + Watsonx box -->
+  <rect x="340" y="158" width="210" height="55" rx="10" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1.5"/>
+  <text x="445" y="181" font-family="sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">LangChain RetrievalQA</text>
+  <text x="445" y="200" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.55)" text-anchor="middle">IBM Watsonx LLM</text>
+  <!-- Output cards -->
+  <rect x="30" y="170" width="150" height="50" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <rect x="30" y="170" width="4" height="50" rx="2" fill="#ef4444"/>
+  <text x="44" y="190" font-family="sans-serif" font-size="10" fill="rgba(239,68,68,0.9)" font-weight="700">SUMMARY</text>
+  <text x="44" y="208" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)">Key insights extracted</text>
+
+  <rect x="190" y="170" width="135" height="50" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <rect x="190" y="170" width="4" height="50" rx="2" fill="#f97316"/>
+  <text x="204" y="190" font-family="sans-serif" font-size="10" fill="rgba(249,115,22,0.9)" font-weight="700">Q&amp;A</text>
+  <text x="204" y="208" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)">Grounded answers</text>
+  <!-- Gradio badge -->
+  <rect x="30" y="232" width="80" height="24" rx="6" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="70" y="248" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Gradio UI</text>
+  <!-- Label bar -->
+  <rect x="0" y="262" width="600" height="38" fill="rgba(0,0,0,0.4)"/>
+  <text x="20" y="286" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.9)" font-weight="600" letter-spacing="1">RAG · LangChain · IBM Watsonx · FAISS · GenAI</text>
+</svg>
