@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="grn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <polygon points="0 0, 6 2.5, 0 5" fill="rgba(168,85,247,0.7)"/>
+    </marker>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg)"/>
+  <circle cx="500" cy="50" r="160" fill="rgba(124,58,237,0.06)"/>
+  <circle cx="80" cy="260" r="120" fill="rgba(168,85,247,0.04)"/>
+
+  <!-- Title badge -->
+  <rect x="20" y="18" width="200" height="30" rx="8" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+  <text x="120" y="38" font-family="sans-serif" font-size="10" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="1">MULTI-AGENT RAG SYSTEM</text>
+
+  <!-- Agent flow: 4 nodes -->
+  <!-- Node 1: Hybrid Retriever -->
+  <rect x="20" y="62" width="120" height="54" rx="9" fill="rgba(124,58,237,0.14)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+  <text x="80" y="82" font-family="sans-serif" font-size="9" font-weight="700" fill="#a855f7" text-anchor="middle">Hybrid Retriever</text>
+  <text x="80" y="96" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">BM25 + Vector</text>
+  <text x="80" y="108" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Search (ChromaDB)</text>
+  <line x1="142" y1="89" x2="158" y2="89" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 2: Research Agent -->
+  <rect x="158" y="62" width="120" height="54" rx="9" fill="rgba(124,58,237,0.11)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="218" y="82" font-family="sans-serif" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">Research Agent</text>
+  <text x="218" y="96" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Watsonx LLaMA</text>
+  <text x="218" y="108" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Context-aware gen.</text>
+  <line x1="280" y1="89" x2="296" y2="89" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 3: Verification Agent -->
+  <rect x="296" y="62" width="120" height="54" rx="9" fill="rgba(124,58,237,0.11)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="356" y="82" font-family="sans-serif" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">Verification Agent</text>
+  <text x="356" y="96" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Granite 3.1 — fact</text>
+  <text x="356" y="108" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">check &amp; halluc. flag</text>
+  <line x1="418" y1="89" x2="434" y2="89" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 4: Self-Correction -->
+  <rect x="434" y="62" width="144" height="54" rx="9" fill="rgba(5,150,105,0.13)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+  <text x="506" y="82" font-family="sans-serif" font-size="9" font-weight="700" fill="#34d399" text-anchor="middle">Self-Correction</text>
+  <text x="506" y="96" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Re-research loop until</text>
+  <text x="506" y="108" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">verified answer</text>
+
+  <!-- Label -->
+  <text x="300" y="136" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.28)" text-anchor="middle" letter-spacing="2">LANGGRAPH STATEFUL WORKFLOW</text>
+
+  <!-- Bottom row: 4 stat tiles -->
+  <rect x="20" y="148" width="130" height="58" rx="9" fill="rgba(124,58,237,0.1)" stroke="rgba(168,85,247,0.22)" stroke-width="1"/>
+  <text x="85" y="168" font-family="sans-serif" font-size="8" font-weight="700" fill="#a855f7" text-anchor="middle">HYBRID RETRIEVAL</text>
+  <text x="85" y="184" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">BM25 keyword + vector</text>
+  <text x="85" y="197" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">semantic search combined</text>
+
+  <rect x="160" y="148" width="130" height="58" rx="9" fill="rgba(124,58,237,0.1)" stroke="rgba(168,85,247,0.22)" stroke-width="1"/>
+  <text x="225" y="168" font-family="sans-serif" font-size="8" font-weight="700" fill="#c084fc" text-anchor="middle">HALLUCINATION-FREE</text>
+  <text x="225" y="184" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">Every answer verified</text>
+  <text x="225" y="197" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">before delivery</text>
+
+  <rect x="300" y="148" width="130" height="58" rx="9" fill="rgba(124,58,237,0.1)" stroke="rgba(168,85,247,0.22)" stroke-width="1"/>
+  <text x="365" y="168" font-family="sans-serif" font-size="8" font-weight="700" fill="#c084fc" text-anchor="middle">MULTI-DOC SUPPORT</text>
+  <text x="365" y="184" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">PDF, DOCX, TXT, MD</text>
+  <text x="365" y="197" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">across multiple uploads</text>
+
+  <rect x="440" y="148" width="138" height="58" rx="9" fill="rgba(5,150,105,0.12)" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"/>
+  <text x="509" y="165" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="1">OUTPERFORMS</text>
+  <text x="509" y="184" font-family="sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle">GPT-4o</text>
+  <text x="509" y="199" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.45)" text-anchor="middle">on document Q&amp;A tasks</text>
+
+  <!-- Footer bar -->
+  <rect x="0" y="222" width="600" height="78" fill="rgba(0,0,0,0.4)"/>
+  <!-- Stack pills -->
+  <rect x="20" y="236" width="72" height="18" rx="5" fill="rgba(124,58,237,0.3)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="56" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">LangGraph</text>
+  <rect x="100" y="236" width="58" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="129" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">Docling</text>
+  <rect x="166" y="236" width="66" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="199" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">ChromaDB</text>
+  <rect x="240" y="236" width="72" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="276" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">IBM Watsonx</text>
+  <rect x="320" y="236" width="62" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="351" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">LangChain</text>
+  <rect x="390" y="236" width="48" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="414" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">Gradio</text>
+  <rect x="446" y="236" width="42" height="18" rx="5" fill="rgba(124,58,237,0.2)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="467" y="249" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">BM25</text>
+  <rect x="496" y="236" width="88" height="18" rx="5" fill="rgba(5,150,105,0.2)" stroke="rgba(16,185,129,0.35)" stroke-width="1"/>
+  <text x="540" y="249" font-family="sans-serif" font-size="8" fill="#34d399" text-anchor="middle">IBM Certificate</text>
+  <text x="300" y="283" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="1">DocChat · IBM RAG &amp; Agentic AI Professional Certificate</text>
+</svg>
