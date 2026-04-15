@@ -124,7 +124,9 @@ main{padding-top:var(--nav-h)}
 .exp-role{font-family:'Raleway',sans-serif;color:var(--text);font-size:1.05rem;font-weight:700}
 .exp-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:3px;flex-wrap:wrap}
 .exp-period{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:rgba(0,212,255,.08);padding:4px 11px;border-radius:20px;border:1px solid rgba(0,212,255,.15);white-space:nowrap}
-.exp-co{font-size:.82rem;color:var(--gold);margin-bottom:14px;font-weight:500}
+.exp-co{font-size:.82rem;color:var(--gold);margin-bottom:12px;font-weight:500}
+.exp-skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.exp-skill{font-size:.68rem;padding:3px 10px;border-radius:20px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.15);color:var(--muted);letter-spacing:.02em}
 .exp-ul{list-style:none;display:flex;flex-direction:column;gap:7px}
 .exp-ul li{font-size:.82rem;color:var(--muted);padding-left:18px;position:relative;line-height:1.7}
 .exp-ul li::before{content:'›';position:absolute;left:0;color:var(--accent);font-size:.9rem}
@@ -469,44 +471,30 @@ main{padding-top:var(--nav-h)}
       <div class="exp-card">
         <div class="exp-hdr"><div class="exp-role">Graduate Research Analyst</div><div class="exp-period">Aug 2025 &ndash; Present</div></div>
         <div class="exp-co">SMU Cox School of Business</div>
-        <ul class="exp-ul">
-          <li>Analyzed social media activity across <strong>300 brands</strong> on Instagram, Facebook, and TikTok — examining cross-platform content similarity, posting frequency, and digital engagement trends to support comparative marketing research.</li>
-          <li>Built structured data analyses to uncover how brands tailor or replicate content strategies across channels, contributing to ongoing academic research on digital marketing behavior.</li>
-          <li>Conducted financial data analysis on <strong>cross-border securities transactions</strong>, organizing and interpreting datasets tied to international market activity and intermediary depositary bank records.</li>
-          <li>Translated raw datasets into clear findings through data cleaning, trend analysis, and synthesis using <strong>Python, SQL, Excel, and AI-enabled tools</strong>.</li>
-        </ul>
+        <div class="exp-skills">
+          <span class="exp-skill">Python</span><span class="exp-skill">SQL</span><span class="exp-skill">Excel</span><span class="exp-skill">Data Analysis</span><span class="exp-skill">Marketing Analytics</span><span class="exp-skill">Financial Data</span><span class="exp-skill">AI Tools</span>
+        </div>
       </div>
       <div class="exp-card">
         <div class="exp-hdr"><div class="exp-role">AI Product &amp; Strategy Intern</div><div class="exp-period">June 2025 &ndash; Aug 2025</div></div>
         <div class="exp-co">RaidoHub</div>
-        <ul class="exp-ul">
-          <li>Collaborated with product engineers, marketing, and executive leadership to design <strong>ML solutions improving airport operational efficiency</strong>.</li>
-          <li>Developed product strategy and roadmap using <strong>RICE and MoSCoW frameworks</strong>, contributing to a 10% efficiency improvement.</li>
-          <li>Conducted stakeholder interviews and product validation research to identify AI-driven automation opportunities.</li>
-          <li><strong>Reduced operational task time by 30%</strong> through strategic ML implementation.</li>
-        </ul>
+        <div class="exp-skills">
+          <span class="exp-skill">Product Strategy</span><span class="exp-skill">RICE Framework</span><span class="exp-skill">MoSCoW</span><span class="exp-skill">ML Solutions</span><span class="exp-skill">Agile</span><span class="exp-skill">Stakeholder Management</span><span class="exp-skill">Product Roadmapping</span>
+        </div>
       </div>
       <div class="exp-card">
         <div class="exp-hdr"><div class="exp-role">Senior Data Engineer</div><div class="exp-period">Nov 2021 &ndash; July 2024</div></div>
         <div class="exp-co">GlobalLogic &middot; <span style="color:var(--muted);font-weight:400">Clients: Apple, T-Mobile</span></div>
-        <ul class="exp-ul">
-          <li>Delivered cloud-based AI/ML and data engineering solutions for <strong>Apple and T-Mobile</strong>, impacting over 500,000 users globally.</li>
-          <li>Coordinated with Product Engineers, Data Scientists, and Leadership to build an automated GIS data framework for <strong>Apple Maps</strong>, reducing task completion time by 30%.</li>
-          <li>Conducted data analysis, schema optimization, and migration planning to streamline large-scale data migrations using Agile methodologies, resulting in a 20% boost in efficiency.</li>
-          <li>Redesigned a client's personalized offer pipeline to handle 3× data volume using PySpark and cloud-native infrastructure.</li>
-          <li>Built unified SQL pipelines and Tableau dashboards consolidating 30+ tables to enable consistent customer inactivity reporting across business units.</li>
-        </ul>
+        <div class="exp-skills">
+          <span class="exp-skill">Python</span><span class="exp-skill">PySpark</span><span class="exp-skill">SQL</span><span class="exp-skill">BigQuery</span><span class="exp-skill">GIS Data</span><span class="exp-skill">Tableau</span><span class="exp-skill">Cloud Infrastructure</span><span class="exp-skill">ETL Pipelines</span><span class="exp-skill">Agile</span>
+        </div>
       </div>
       <div class="exp-card">
         <div class="exp-hdr"><div class="exp-role">AI/ML Data Engineer</div><div class="exp-period">Feb 2019 &ndash; Oct 2021</div></div>
         <div class="exp-co">SpringML &middot; <span style="color:var(--muted);font-weight:400">Clients: Google, Northwell Health, City of Memphis, Dow Jones</span></div>
-        <ul class="exp-ul">
-          <li>Delivered AI/ML solutions for <strong>Google, Northwell Health, City of Memphis, and Dow Jones</strong> across healthcare, public sector, and enterprise domains — achieving a 70% POC-to-production conversion rate.</li>
-          <li>Built a hybrid OCR + NLP invoice processing pipeline for <strong>Northwell Health</strong>, improving extraction accuracy from 65% to 90% and reducing processing time by 50%.</li>
-          <li>Designed and delivered an event-driven real-time health check-in system for <strong>Google</strong>, supporting 10,000+ sessions with sub-2-second response and 100% compliance audit pass.</li>
-          <li>Developed a computer vision pothole detection model for the <strong>City of Memphis</strong>, improving accuracy from 70% to 90%+ and supporting road safety for 65,000+ residents.</li>
-          <li>Built an AI Slack chatbot for <strong>Dow Jones</strong> covering password reset and employee onboarding — achieving 92% accuracy and earning $3M in follow-on client work.</li>
-        </ul>
+        <div class="exp-skills">
+          <span class="exp-skill">Python</span><span class="exp-skill">TensorFlow</span><span class="exp-skill">NLP</span><span class="exp-skill">Computer Vision</span><span class="exp-skill">OCR</span><span class="exp-skill">Conversational AI</span><span class="exp-skill">Google Cloud</span><span class="exp-skill">REST APIs</span><span class="exp-skill">Microservices</span>
+        </div>
       </div>
     </div>
   </section>
