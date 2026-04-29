@@ -74,6 +74,12 @@ main{padding-top:var(--nav-h)}
 .hero-stats{display:flex;gap:34px;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--border)}
 .hst-num{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hst-lbl{font-size:.68rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+/* CLIENTS STRIP */
+.clients-strip{margin-top:20px;margin-bottom:24px}
+.clients-label{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.clients-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.client-pill{padding:5px 14px;border-radius:20px;border:1px solid var(--border);font-size:.72rem;font-weight:500;color:var(--muted);background:rgba(255,255,255,.03);letter-spacing:.04em;transition:all .22s;white-space:nowrap}
+.client-pill:hover{border-color:rgba(0,212,255,.35);color:var(--accent);background:rgba(0,212,255,.06)}
 .hero-photo-wrap{display:flex;justify-content:center}
 .hero-photo-card{position:relative;width:min(100%,380px);padding:16px;border-radius:28px;background:linear-gradient(145deg,rgba(17,24,39,.95),rgba(12,16,34,.88));border:1px solid rgba(0,212,255,.12);box-shadow:0 22px 60px rgba(0,0,0,.4)}
 .hero-photo-card::before{content:'';position:absolute;inset:-1px;border-radius:28px;padding:1px;background:linear-gradient(135deg,rgba(0,212,255,.5),rgba(124,58,237,.3),transparent 65%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
@@ -359,6 +365,17 @@ main{padding-top:var(--nav-h)}
         <h1 class="hero-name">I'm <span>Mounica</span><br>Reddypalli</h1>
         <div class="hero-typed">I'm a <span id="typed"></span><span class="typed-cur">|</span></div>
         <p class="hero-bio">MBA Candidate with 6+ years building Data Science and AI/ML applications, connecting technical execution with business strategy to create intelligent products that solve real problems and deliver measurable impact.</p>
+        <div class="clients-strip">
+          <div class="clients-label">Clients &amp; Industries</div>
+          <div class="clients-row">
+            <span class="client-pill">Google</span>
+            <span class="client-pill">Apple Maps</span>
+            <span class="client-pill">T-Mobile</span>
+            <span class="client-pill">Dow Jones</span>
+            <span class="client-pill">Northwell Health</span>
+            <span class="client-pill">US State Governments</span>
+          </div>
+        </div>
         <div class="hero-btns">
           <a class="btn-fill" href="#projects">View My Work</a>
           <a class="btn-outline" href="#contact">Get In Touch</a>
@@ -382,36 +399,36 @@ main{padding-top:var(--nav-h)}
     <h2 class="sec-title">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm Mounica — a technologist and strategist with a track record of turning complex data and AI systems into measurable business outcomes. I operate effectively across the full spectrum from hands-on engineering to product strategy, which means I can define what needs to be built, architect how it gets built, and ensure it delivers value once it's live.</p>
-        <p>My experience spans enterprise clients across healthcare, telecom, and public sector in the U.S. — including <strong>Apple, T-Mobile, Google, and Northwell Health</strong>. I've designed and delivered large-scale data pipelines, built AI and ML systems, led cross-functional delivery as a program lead, and translated technical work into stakeholder-facing strategy and roadmaps.</p>
-        <p>Whether the role calls for an <strong>analyst</strong> surfacing insights from complex data, a <strong>data engineer</strong> building reliable pipelines, a <strong>product or program manager</strong> driving delivery across teams, or a <strong>solutions architect</strong> designing systems that scale — I bring the depth and range to contribute from day one.</p>
+        <p>I'm Mounica — an AI/ML Data Engineer with 6+ years building intelligent data systems for enterprise clients across healthcare, telecom, and public sector in the U.S. I specialize in designing and shipping end-to-end ML pipelines, GenAI applications, and scalable data infrastructure that drive real, measurable outcomes.</p>
+        <p>I've delivered production AI/ML systems for <strong>Apple, T-Mobile, Google, and Northwell Health</strong> — spanning computer vision, NLP, conversational AI, RAG pipelines, and large-scale data engineering on AWS, GCP, and Azure. I don't just build models — I own the full stack from raw data to deployed product.</p>
+        <p>Currently deepening my GenAI expertise through the <strong>IBM RAG & Agentic AI Professional Certificate</strong>, building multi-agent systems, LangGraph workflows, and multimodal AI applications — applying the latest in LLMs and agentic AI to real engineering problems.</p>
         <div class="tags-row">
-          <span class="tag">Data Engineering</span><span class="tag">AI / ML</span>
-          <span class="tag">Product Strategy</span><span class="tag">Program Management</span>
-          <span class="tag">Solutions Architecture</span><span class="tag">Business Analytics</span>
-          <span class="tag">LLMs & GenAI</span><span class="tag">Stakeholder Delivery</span>
+          <span class="tag">AI / ML Engineering</span><span class="tag">Data Engineering</span>
+          <span class="tag">LLMs & GenAI</span><span class="tag">RAG Pipelines</span>
+          <span class="tag">Multi-Agent Systems</span><span class="tag">Cloud Infrastructure</span>
+          <span class="tag">NLP & Computer Vision</span><span class="tag">Python & PySpark</span>
         </div>
       </div>
       <div class="about-highlights">
         <div class="ah-card">
-          <div class="ah-icon">📊</div>
-          <div class="ah-role">Analyst</div>
-          <div class="ah-desc">Translating large, complex datasets into clear insights and actionable recommendations for business decisions.</div>
+          <div class="ah-icon">🤖</div>
+          <div class="ah-role">AI / ML Engineering</div>
+          <div class="ah-desc">Building production ML models, RAG systems, and multi-agent pipelines using LangGraph, LangChain, CrewAI, and IBM Watsonx.</div>
         </div>
         <div class="ah-card">
           <div class="ah-icon">⚙️</div>
-          <div class="ah-role">Data Engineer</div>
-          <div class="ah-desc">Building scalable pipelines, ETL systems, and cloud data infrastructure across AWS, GCP, and Azure.</div>
+          <div class="ah-role">Data Engineering</div>
+          <div class="ah-desc">Designing scalable ETL pipelines, streaming systems, and cloud data infrastructure across AWS, GCP, and Azure using Python, PySpark, and SQL.</div>
         </div>
         <div class="ah-card">
-          <div class="ah-icon">🗺️</div>
-          <div class="ah-role">Product & Program Manager</div>
-          <div class="ah-desc">Leading cross-functional delivery, defining roadmaps, and aligning engineering output to business goals.</div>
+          <div class="ah-icon">🧠</div>
+          <div class="ah-role">Generative AI</div>
+          <div class="ah-desc">Applying LLMs, vector databases, embeddings, and agentic workflows to build intelligent, hallucination-resistant AI applications.</div>
         </div>
         <div class="ah-card">
-          <div class="ah-icon">🏗️</div>
-          <div class="ah-role">Solutions Architect</div>
-          <div class="ah-desc">Designing end-to-end AI and data systems — from event-driven pipelines to modular, API-first architectures.</div>
+          <div class="ah-icon">☁️</div>
+          <div class="ah-role">Cloud & MLOps</div>
+          <div class="ah-desc">Deploying and scaling AI systems on GCP, AWS, and Azure — from Dataproc and BigQuery to Vertex AI and cloud-native microservices.</div>
         </div>
       </div>
     </div>
@@ -489,7 +506,7 @@ main{padding-top:var(--nav-h)}
         </div>
       </div>
       <div class="exp-card">
-        <div class="exp-hdr"><div class="exp-role">Product Engineer (Data)</div><div class="exp-period">Nov 2021 &ndash; Jul 2024</div></div>
+        <div class="exp-hdr"><div class="exp-role">Senior Data Engineer (Product)</div><div class="exp-period">Nov 2021 &ndash; Jul 2024</div></div>
         <div class="exp-co">GlobalLogic &middot; <span style="color:var(--muted);font-weight:400">Full-time · Clients: Apple, T-Mobile</span></div>
         <div class="exp-skills">
           <span class="exp-skill">Python</span><span class="exp-skill">PySpark</span><span class="exp-skill">SQL</span><span class="exp-skill">BigQuery</span><span class="exp-skill">GIS Data</span><span class="exp-skill">Tableau</span><span class="exp-skill">Cloud Infrastructure</span><span class="exp-skill">ETL Pipelines</span><span class="exp-skill">Agile</span>
@@ -1101,7 +1118,7 @@ function highlightCard(id) {
 }
 
 // Typed text
-const roles = ['AI Product Builder','Data Scientist','Technology Strategist','STEM MBA Candidate','Problem Solver'];
+const roles = ['AI Data Engineer','AI Product Builder','Data Scientist','Technology Strategist','STEM MBA Candidate','Problem Solver'];
 let ri=0,ci=0,del=false;
 function type() {
   const el = document.getElementById('typed');
